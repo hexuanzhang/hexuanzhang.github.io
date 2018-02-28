@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="wxLite," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="青青子衿" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="注册页面 通过 Page() 函数注册页面，函数接受 Object 参数，指定页面的初始数据、生命周期函数、事件处理函数等     属性 类型 描述     data Object 初始化数据   onLoad Function 生命周期函数–监听页面加载   onReady Function 生命周期函数–监听页面初次渲染完成   onShow Function 生命周期函数–监听页面显示">
+<meta name="keywords" content="wxLite">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小程序页面注册">
+<meta property="og:url" content="https://hexuanzhang.github.io/2018/02/07/小程序页面注册/index.html">
+<meta property="og:site_name" content="青青子衿">
+<meta property="og:description" content="注册页面 通过 Page() 函数注册页面，函数接受 Object 参数，指定页面的初始数据、生命周期函数、事件处理函数等     属性 类型 描述     data Object 初始化数据   onLoad Function 生命周期函数–监听页面加载   onReady Function 生命周期函数–监听页面初次渲染完成   onShow Function 生命周期函数–监听页面显示">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://mp.weixin.qq.com/debug/wxadoc/dev/image/mina-lifecycle.png?t=201822">
+<meta property="og:updated_time" content="2018-02-07T14:40:10.483Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小程序页面注册">
+<meta name="twitter:description" content="注册页面 通过 Page() 函数注册页面，函数接受 Object 参数，指定页面的初始数据、生命周期函数、事件处理函数等     属性 类型 描述     data Object 初始化数据   onLoad Function 生命周期函数–监听页面加载   onReady Function 生命周期函数–监听页面初次渲染完成   onShow Function 生命周期函数–监听页面显示">
+<meta name="twitter:image" content="https://mp.weixin.qq.com/debug/wxadoc/dev/image/mina-lifecycle.png?t=201822">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://hexuanzhang.github.io/2018/02/07/小程序页面注册/"/>
+
+
+
+
+
+  <title>小程序页面注册 | 青青子衿</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">青青子衿</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hexuanzhang.github.io/2018/02/07/小程序页面注册/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="青青子衿">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="青青子衿">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">小程序页面注册</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T22:36:04+08:00">
+                21 天前
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/wxLite/" itemprop="url" rel="index">
+                    <span itemprop="name">wxLite</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  861
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="注册页面"><a href="#注册页面" class="headerlink" title="注册页面"></a>注册页面</h2><blockquote>
+<p>通过 <code>Page()</code> 函数注册页面，函数接受 <code>Object</code> 参数，指定页面的初始数据、生命周期函数、事件处理函数等</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>Object</td>
+<td>初始化数据</td>
+</tr>
+<tr>
+<td>onLoad</td>
+<td>Function</td>
+<td>生命周期函数–监听页面加载</td>
+</tr>
+<tr>
+<td>onReady</td>
+<td>Function</td>
+<td>生命周期函数–监听页面初次渲染完成</td>
+</tr>
+<tr>
+<td>onShow</td>
+<td>Function</td>
+<td>生命周期函数–监听页面显示</td>
+</tr>
+<tr>
+<td>onHide</td>
+<td>Function</td>
+<td>生命周期函数–监听页面隐藏</td>
+</tr>
+<tr>
+<td>onUnload</td>
+<td>Function</td>
+<td>生命周期函数–监听页面卸载</td>
+</tr>
+<tr>
+<td>onPullDownRefresh</td>
+<td>Function</td>
+<td>页面相关事件处理函数–监听用户下拉动作</td>
+</tr>
+<tr>
+<td>onReachBottom</td>
+<td>Function</td>
+<td>页面上拉触底事件的处理函数</td>
+</tr>
+<tr>
+<td>onShareAppMessage</td>
+<td>Function</td>
+<td>右上角转发函数</td>
+</tr>
+<tr>
+<td>onPageScroll</td>
+<td>Function</td>
+<td>页面滚动函数</td>
+</tr>
+<tr>
+<td>onTabItemTap</td>
+<td>Function</td>
+<td>当前是 tab 页时，点击 tab 时触发</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>Any</td>
+<td>可以添加任意的函数或数据到 object 参数中，在页面的函数中用 <code>this</code> 可以访问</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">    data: &#123;</span><br><span class="line">        text: &quot;This is page data.&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    onLoad: (options) =&gt; &#123; &#125;,</span><br><span class="line">    onReady: () =&gt; &#123; &#125;,</span><br><span class="line">    onShow: () =&gt; &#123; &#125;,</span><br><span class="line">    onHide: () =&gt; &#123; &#125;,</span><br><span class="line">    onUnload: () =&gt; &#123; &#125;,</span><br><span class="line">    onPullDownRefresh: () =&gt; &#123; &#125;,</span><br><span class="line">    onReachBottom: () =&gt; &#123; &#125;,</span><br><span class="line">    onShareAppMessage: () =&gt; &#123; &#125;,</span><br><span class="line">    onPageScroll: () =&gt; &#123; &#125;,</span><br><span class="line">    onTabItemTap: (item) =&gt; &#123;</span><br><span class="line">        console.log(item.index)</span><br><span class="line">        console.log(item.pagePath)</span><br><span class="line">        console.log(item.text)</span><br><span class="line">    &#125;,</span><br><span class="line">    viewTap: function () &#123;</span><br><span class="line">        this.setData(&#123;</span><br><span class="line">            text: &apos;Set some data for updating view.&apos;</span><br><span class="line">        &#125;, function () &#123;</span><br><span class="line">            // this is setData callback</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    otherData: &#123;&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="生命周期函数"><a href="#生命周期函数" class="headerlink" title="生命周期函数"></a>生命周期函数</h3><ul>
+<li><p><code>onLoad</code></p>
+<blockquote>
+<p>只调用一次，可以在该函数中获取其他页面打开当前页面所调用的 <code>query</code> 参数</p>
+</blockquote>
+</li>
+<li><p><code>onShow</code></p>
+<blockquote>
+<p>每次打开页面都会调用</p>
+</blockquote>
+</li>
+<li><p><code>onReady</code></p>
+<blockquote>
+<p>页面初次渲染时调用，此时可以与视图进行交互</p>
+<p>对界面进行设置如 <code>wx.setNavigationBarTitle</code> 需在该函数之后</p>
+</blockquote>
+</li>
+<li><p><code>onHide</code></p>
+<blockquote>
+<p>使用 <code>navigateTo</code> 或切换底部 <code>tab</code> 时调用</p>
+</blockquote>
+</li>
+<li><p><code>onUnload</code></p>
+<blockquote>
+<p>使用 <code>redirectTo</code> 或 <code>navigateBack</code> 时调用</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/mina-lifecycle.png?t=201822" alt="img"></p>
+<h3 id="页面相关事件处理函数"><a href="#页面相关事件处理函数" class="headerlink" title="页面相关事件处理函数"></a>页面相关事件处理函数</h3><ul>
+<li><p><code>onPullDownRefresh</code></p>
+<blockquote>
+<p>监听下拉刷新事件</p>
+<p>需要在全局配置或页面配置中开启 <code>enablePullDownRefresh</code></p>
+<p>当处理完数据刷新后，可以通过 <a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/pulldown.html#wxstoppulldownrefresh" target="_blank" rel="noopener"><code>wx.stopPullDownRefresh</code></a> 停止当前页面的下拉刷新，也可通过 <code>wx.startPullDownRefresh</code> 调触发下拉刷新动画</p>
+</blockquote>
+</li>
+<li><p><code>onReachBottom</code></p>
+<blockquote>
+<p>监听上拉触底事件</p>
+<p>需要在全局配置或页面配置中设置触发距离 <code>onReachBottomDistance</code></p>
+<p>在触发距离内滑动期间只会被触发一次</p>
+</blockquote>
+</li>
+<li><p><code>onPageScroll</code></p>
+<blockquote>
+<p>监听页面滚动事件</p>
+<p>参数为 Object，包含 <code>scrollTop</code> 字段（页面在垂直方向已滚动的距离，单位px）</p>
+</blockquote>
+</li>
+<li><p><code>onShareAppMessage</code></p>
+<blockquote>
+<p>只有定义了此事件处理函数，右上角菜单才会显示“转发”按钮，点击转发按钮时触发</p>
+<p>该事件需要返回一个 <code>Object</code>，用于自定义转发内容，包含转发标题和转发路径</p>
+<blockquote>
+<p>title：转发标题，默认为小程序名称</p>
+<p>path：转发路径，必须以 / 开头，默认为当前页面路径</p>
+</blockquote>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">    onShareAppMessage: () =&gt; (&#123;</span><br><span class="line">        title: &apos;自定义转发标题&apos;,</span><br><span class="line">        path: &apos;/pages/logs/logs&apos;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Page-prototype-route"><a href="#Page-prototype-route" class="headerlink" title="Page.prototype.route"></a>Page.prototype.route</h3><blockquote>
+<p><code>route</code> 字段可以获取到当前页面的路径</p>
+<p>在 <code>onReay</code>、<code>onLoad</code>等函数中调用该字段会报错</p>
+</blockquote>
+<h3 id="Page-prototype-setData"><a href="#Page-prototype-setData" class="headerlink" title="Page.prototype.setData()"></a>Page.prototype.setData()</h3><blockquote>
+<p><code>setData</code> 函数用于将数据从逻辑层发送到视图层（异步），同时改变对应的 <code>this.data</code> 的值（同步）</p>
+<p><strong>直接修改 this.data 而不调用 this.setData 是无法改变页面状态，还会造成数据不一致</strong></p>
+<p><strong>单次修改的数据不能超过 1024kB，请尽量避免一次设置过多的数据</strong></p>
+<p>不要把 data 中任何一项的 value 设为 <code>undefined</code> ，否则这一项将不被设置并可能遗留一些潜在问题</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>必填</th>
+<th>描述</th>
+<th>最低版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>Object</td>
+<td>是</td>
+<td>需要改变的数据（key: value）</td>
+<td></td>
+</tr>
+<tr>
+<td>callback</td>
+<td>Function</td>
+<td>否</td>
+<td>回调函数</td>
+<td><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/compatibility.html" target="_blank" rel="noopener">1.5.0</a></td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    青青子衿
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://hexuanzhang.github.io/2018/02/07/小程序页面注册/" title="小程序页面注册">https://hexuanzhang.github.io/2018/02/07/小程序页面注册/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/wxLite/" rel="tag"># wxLite</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/06/小程序运行机制和注册/" rel="next" title="小程序运行机制和注册">
+                <i class="fa fa-chevron-left"></i> 小程序运行机制和注册
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/09/小程序页面路由/" rel="prev" title="小程序页面路由">
+                小程序页面路由 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">青青子衿</p>
+              <p class="site-description motion-element" itemprop="description">青青子衿，悠悠我心</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#注册页面"><span class="nav-number">1.</span> <span class="nav-text">注册页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生命周期函数"><span class="nav-number">1.1.</span> <span class="nav-text">生命周期函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面相关事件处理函数"><span class="nav-number">1.2.</span> <span class="nav-text">页面相关事件处理函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Page-prototype-route"><span class="nav-number">1.3.</span> <span class="nav-text">Page.prototype.route</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Page-prototype-setData"><span class="nav-number">1.4.</span> <span class="nav-text">Page.prototype.setData()</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  <!--
+  &copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">青青子衿</span>
+  -->
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+    <!--
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      本站总点击
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+    -->
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytmKMEKk';
+      var conf = 'c05b7ae4543c881017b6f30806af34c8';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("MnRSmn6zIoJH2cKdus4STKnh-gzGzoHsz", "OmFstYUx6dn9Yyj64TTwSwAe");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
