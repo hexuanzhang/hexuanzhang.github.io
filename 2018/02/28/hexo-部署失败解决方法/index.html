@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="hexo," />
 
 
 
@@ -81,23 +81,20 @@
 
 
 
-<meta name="description" content="浅拷贝循环遍历1234567891011121314const shallowCopy = (obj) =&amp;gt; &amp;#123;    let result = &amp;#123;&amp;#125;;    for(let property in obj) &amp;#123;        obj.hasOwnProperty(property) &amp;amp;&amp;amp; (result[property] = obj">
-<meta name="keywords" content="javascript">
+<meta name="description" content="Hexo 部署失败解决方法昨天写博客时发现无法部署，执行 hexo d 出现错误，提示 fatal: could not read Username for &amp;#39;https://github.com&amp;#39;: No error。  No error ？蜜汁无解！ 后来经过查询，发现是由于 github 停用了TLS1.0/1.1，因而 HTTPS 提交不上去。 解决方法 有四种解决方案，推">
+<meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浅拷贝和深拷贝的实现方式">
-<meta property="og:url" content="https://hexuanzhang.github.io/2018/02/11/浅拷贝和深拷贝的实现方式/index.html">
+<meta property="og:title" content="hexo 部署失败解决方法">
+<meta property="og:url" content="https://hexuanzhang.github.io/2018/02/28/hexo-部署失败解决方法/index.html">
 <meta property="og:site_name" content="青青子衿">
-<meta property="og:description" content="浅拷贝循环遍历1234567891011121314const shallowCopy = (obj) =&amp;gt; &amp;#123;    let result = &amp;#123;&amp;#125;;    for(let property in obj) &amp;#123;        obj.hasOwnProperty(property) &amp;amp;&amp;amp; (result[property] = obj">
+<meta property="og:description" content="Hexo 部署失败解决方法昨天写博客时发现无法部署，执行 hexo d 出现错误，提示 fatal: could not read Username for &amp;#39;https://github.com&amp;#39;: No error。  No error ？蜜汁无解！ 后来经过查询，发现是由于 github 停用了TLS1.0/1.1，因而 HTTPS 提交不上去。 解决方法 有四种解决方案，推">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oyzpu0yr9.bkt.clouddn.com/blog/180211/k3geK1AjGA.png?imageslim">
-<meta property="og:image" content="http://oyzpu0yr9.bkt.clouddn.com/blog/180211/h096BLehl2.png?imageslim">
-<meta property="og:image" content="http://oyzpu0yr9.bkt.clouddn.com/blog/180211/8HFI66aki5.png?imageslim">
-<meta property="og:image" content="http://oyzpu0yr9.bkt.clouddn.com/blog/180211/D10CGeI1jA.png?imageslim">
-<meta property="og:updated_time" content="2018-02-12T01:55:30.608Z">
+<meta property="og:image" content="http://oyzpu0yr9.bkt.clouddn.com/blog/180228/j3mlBal3E4.png?imageslim">
+<meta property="og:updated_time" content="2018-02-28T15:10:38.773Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浅拷贝和深拷贝的实现方式">
-<meta name="twitter:description" content="浅拷贝循环遍历1234567891011121314const shallowCopy = (obj) =&amp;gt; &amp;#123;    let result = &amp;#123;&amp;#125;;    for(let property in obj) &amp;#123;        obj.hasOwnProperty(property) &amp;amp;&amp;amp; (result[property] = obj">
-<meta name="twitter:image" content="http://oyzpu0yr9.bkt.clouddn.com/blog/180211/k3geK1AjGA.png?imageslim">
+<meta name="twitter:title" content="hexo 部署失败解决方法">
+<meta name="twitter:description" content="Hexo 部署失败解决方法昨天写博客时发现无法部署，执行 hexo d 出现错误，提示 fatal: could not read Username for &amp;#39;https://github.com&amp;#39;: No error。  No error ？蜜汁无解！ 后来经过查询，发现是由于 github 停用了TLS1.0/1.1，因而 HTTPS 提交不上去。 解决方法 有四种解决方案，推">
+<meta name="twitter:image" content="http://oyzpu0yr9.bkt.clouddn.com/blog/180228/j3mlBal3E4.png?imageslim">
 
 
 
@@ -127,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://hexuanzhang.github.io/2018/02/11/浅拷贝和深拷贝的实现方式/"/>
+  <link rel="canonical" href="https://hexuanzhang.github.io/2018/02/28/hexo-部署失败解决方法/"/>
 
 
 
 
 
-  <title>浅拷贝和深拷贝的实现方式 | 青青子衿</title>
+  <title>hexo 部署失败解决方法 | 青青子衿</title>
   
 
 
@@ -260,7 +257,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hexuanzhang.github.io/2018/02/11/浅拷贝和深拷贝的实现方式/">
+    <link itemprop="mainEntityOfPage" href="https://hexuanzhang.github.io/2018/02/28/hexo-部署失败解决方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="青青子衿">
@@ -277,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">浅拷贝和深拷贝的实现方式</h1>
+          <h1 class="post-title" itemprop="name headline">hexo 部署失败解决方法</h1>
         
 
         <div class="post-meta">
@@ -289,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-11T23:30:29+08:00">
-                17 天前
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-28T23:07:30+08:00">
+                9 小时前
               </time>
             
 
@@ -312,8 +309,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
                   </a>
                 </span>
 
@@ -341,7 +338,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  651
+                  127
                 </span>
               
 
@@ -357,7 +354,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  1
                 </span>
               
             </div>
@@ -378,39 +375,20 @@
       
 
       
-        <h2 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h2><h3 id="循环遍历"><a href="#循环遍历" class="headerlink" title="循环遍历"></a>循环遍历</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const shallowCopy = (obj) =&gt; &#123;</span><br><span class="line">    let result = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    for(let property in obj) &#123;</span><br><span class="line">        obj.hasOwnProperty(property) &amp;&amp; (result[property] = obj[property]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const obj = &#123; a: 1, b: [2, 3], c: new Date(), d: new RegExp(&apos;^/d&#123;1, 6&#125;&apos;) &#125;;</span><br><span class="line"></span><br><span class="line">console.log(obj);</span><br><span class="line">setTimeout(() =&gt; console.log(shallowCopy(obj)), 1000);</span><br></pre></td></tr></table></figure>
-<h3 id="Object-assign"><a href="#Object-assign" class="headerlink" title="Object.assign()"></a>Object.assign()</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123; a: &#123;&#125;, b: [2, 3], c: new Date(), d: new RegExp(&apos;^/d&#123;1, 6&#125;&apos;) &#125;;</span><br><span class="line"></span><br><span class="line">console.log(obj);</span><br><span class="line">setTimeout(() =&gt; console.log(Object.assign(&#123;&#125;, obj)), 1000);</span><br></pre></td></tr></table></figure>
-<h2 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h2><h3 id="JSON-parse"><a href="#JSON-parse" class="headerlink" title="JSON.parse()"></a>JSON.parse()</h3><blockquote>
-<p>针对纯 JSON 数据对象的深拷贝，可以使用 JSON 全局对象的 <code>parse</code> 和 <code>stringify</code> 方法来实现</p>
-<p>不过这种方法有一定的局限性，它能正确处理的对象只有 Number, String, Boolean, Array, 及扁平对象，即那些能够被 json 直接表示的数据结构</p>
+        <h2 id="Hexo-部署失败解决方法"><a href="#Hexo-部署失败解决方法" class="headerlink" title="Hexo 部署失败解决方法"></a>Hexo 部署失败解决方法</h2><p>昨天写博客时发现无法部署，执行 <code>hexo d</code> 出现错误，提示 <code>fatal: could not read Username for &#39;https://github.com&#39;: No error</code>。</p>
+<p><img src="http://oyzpu0yr9.bkt.clouddn.com/blog/180228/j3mlBal3E4.png?imageslim" alt="mark"></p>
+<p><code>No error</code> ？蜜汁无解！</p>
+<p>后来经过查询，发现是由于 <a href="https://githubengineering.com/crypto-removal-notice/" target="_blank" rel="noopener">github 停用了TLS1.0/1.1</a>，因而 HTTPS 提交不上去。</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><blockquote>
+<p>有四种解决方案，推荐用第二种方案（更新 git）</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const deepCopy = obj =&gt; JSON.parse(JSON.stringify(obj));</span><br><span class="line"></span><br><span class="line">const obj = &#123; a: 1, date: new Date()&#125;;</span><br><span class="line"></span><br><span class="line">console.log(obj);</span><br><span class="line">setTimeout(() =&gt; console.log(deepCopy(obj)), 1000);</span><br></pre></td></tr></table></figure>
-<p><img src="http://oyzpu0yr9.bkt.clouddn.com/blog/180211/k3geK1AjGA.png?imageslim" alt="mark"></p>
-<h3 id="Structured-Clone"><a href="#Structured-Clone" class="headerlink" title="Structured Clone"></a>Structured Clone</h3><blockquote>
-<p><a href="https://html.spec.whatwg.org/multipage/structured-data.html#structuredserializeinternal" target="_blank" rel="noopener">Structured Clone</a> 是一种已存在的运算法则，它可以将对象从一种场景传递至另一场景，如通过 <code>postMessage</code> 方法可以发送信息至其他 <code>window</code> 或 <code>webWorker</code>；它不仅可以处理循环对象，还支持<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#Supported_types" target="_blank" rel="noopener">一系列的数据类型</a></p>
-<p>我们可以通过这种方式来间接地实现深拷贝，下面介绍具体的实现方法：</p>
-</blockquote>
-<h4 id="MessageChannel"><a href="#MessageChannel" class="headerlink" title="MessageChannel"></a>MessageChannel</h4><blockquote>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API" target="_blank" rel="noopener">Channel Messaging</a> 可以创建消息通道，并通过消息通道的端口号来实现数据传输；发送和接受这个过程，就实现了对象的深拷贝</p>
-<p>局限性：这种方式是异步的，有时候我们需要同步拷贝</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const structuralClone = (obj) =&gt; &#123;</span><br><span class="line">    return new Promise(resolve =&gt; &#123;</span><br><span class="line">        const &#123; port1, port2 &#125; = new MessageChannel();</span><br><span class="line">        port2.onmessage = ev =&gt; resolve(ev.data);</span><br><span class="line">        port1.postMessage(obj);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let obj = &#123; a: &#123; status: false &#125; &#125;,</span><br><span class="line">    _obj = null;</span><br><span class="line"></span><br><span class="line">structuralClone(obj).then(obj =&gt; _obj = obj);</span><br></pre></td></tr></table></figure>
-<p><img src="http://oyzpu0yr9.bkt.clouddn.com/blog/180211/h096BLehl2.png?imageslim" alt="mark"></p>
-<h4 id="History-API"><a href="#History-API" class="headerlink" title="History API"></a>History API</h4><blockquote>
-<p>众所周知，<code>history.pushState()</code> 方法需要传递一个 <code>state</code>  状态对象；我们可以通过赋值，然后再取值的方式来实现深拷贝</p>
-<p>当然，为了不产生新的历史记录，可以使用 <code>history.replaceState()</code> 方法</p>
-<p>局限性：IOS9.3 中 Safari <a href="https://github.com/ReactTraining/history/issues/291" target="_blank" rel="noopener">限制</a> 30s 内至多只能调用 100 次 <code>replaceState()</code> 方法</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const structuralClone = (obj) =&gt; &#123;</span><br><span class="line">    const oldState = history.state;</span><br><span class="line">    history.replaceState(obj, document.title);</span><br><span class="line"></span><br><span class="line">    const copy = history.state;</span><br><span class="line">    history.replaceState(oldState, document.title);</span><br><span class="line"></span><br><span class="line">    return copy;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const obj = &#123; a: &#123; status: false &#125; &#125;,</span><br><span class="line">    _obj = structuralClone(obj);</span><br></pre></td></tr></table></figure>
-<p><img src="http://oyzpu0yr9.bkt.clouddn.com/blog/180211/8HFI66aki5.png?imageslim" alt="mark"></p>
-<h4 id="Notification-API"><a href="#Notification-API" class="headerlink" title="Notification API"></a>Notification API</h4><blockquote>
-<p>在发送桌面通知时，需要传递 <code>data</code> 数据，我们可以在这个 <code>data</code> 属性上做文章</p>
-<p>局限性：这种方式需要通过浏览器授权，效率上会低一些；另外，Safari <a href="https://developer.mozilla.org/en-US/docs/Web/API/notification/data" target="_blank" rel="noopener">不支持</a> <code>Notification.data</code></p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const structuralClone = (obj) =&gt; &#123;</span><br><span class="line">    return new Notification(&apos;&apos;, &#123; data: obj, silent: true &#125;).data;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const obj = &#123; a: &#123; status: false &#125; &#125;,</span><br><span class="line">    _obj = structuralClone(obj);</span><br></pre></td></tr></table></figure>
-<p><img src="http://oyzpu0yr9.bkt.clouddn.com/blog/180211/D10CGeI1jA.png?imageslim" alt="mark"></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="https://dassur.ma/things/deep-copy/#performance-extravaganza" target="_blank" rel="noopener">Deep-copying in JavaScript</a></li>
+<ul>
+<li><p>将 HTTPS 改用为 SSH 方式</p>
+</li>
+<li><p><a href="https://git-scm.com/download/" target="_blank" rel="noopener">下载最新版（v2.16.2）git</a></p>
+</li>
+<li><p>不更新 git，单独安装<a href="https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/" target="_blank" rel="noopener">Git Credential Manager for Windows</a></p>
+</li>
 </ul>
 
       
@@ -432,7 +410,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://hexuanzhang.github.io/2018/02/11/浅拷贝和深拷贝的实现方式/" title="浅拷贝和深拷贝的实现方式">https://hexuanzhang.github.io/2018/02/11/浅拷贝和深拷贝的实现方式/</a>
+    <a href="https://hexuanzhang.github.io/2018/02/28/hexo-部署失败解决方法/" title="hexo 部署失败解决方法">https://hexuanzhang.github.io/2018/02/28/hexo-部署失败解决方法/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -447,7 +425,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag"># javascript</a>
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
           
         </div>
       
@@ -460,8 +438,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/09/小程序页面路由/" rel="next" title="小程序页面路由">
-                <i class="fa fa-chevron-left"></i> 小程序页面路由
+              <a href="/2018/02/27/CSS3-不常用属性整理/" rel="next" title="CSS3 不常用属性整理">
+                <i class="fa fa-chevron-left"></i> CSS3 不常用属性整理
               </a>
             
           </div>
@@ -469,10 +447,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/27/CSS3-不常用属性整理/" rel="prev" title="CSS3 不常用属性整理">
-                CSS3 不常用属性整理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -618,7 +592,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#浅拷贝"><span class="nav-number">1.</span> <span class="nav-text">浅拷贝</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#循环遍历"><span class="nav-number">1.1.</span> <span class="nav-text">循环遍历</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-assign"><span class="nav-number">1.2.</span> <span class="nav-text">Object.assign()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深拷贝"><span class="nav-number">2.</span> <span class="nav-text">深拷贝</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON-parse"><span class="nav-number">2.1.</span> <span class="nav-text">JSON.parse()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Structured-Clone"><span class="nav-number">2.2.</span> <span class="nav-text">Structured Clone</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MessageChannel"><span class="nav-number">2.2.1.</span> <span class="nav-text">MessageChannel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#History-API"><span class="nav-number">2.2.2.</span> <span class="nav-text">History API</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Notification-API"><span class="nav-number">2.2.3.</span> <span class="nav-text">Notification API</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-部署失败解决方法"><span class="nav-number">1.</span> <span class="nav-text">Hexo 部署失败解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方法"><span class="nav-number">1.1.</span> <span class="nav-text">解决方法</span></a></li></ol></li></ol></div>
             
 
           </div>
