@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://hexuanzhang.github.io/2018/03/02/BroadcastChannel/</loc>
+    <lastmod>2018-03-02T15:50:20.635Z</lastmod>
+    <data>
+        <display>
+        <title>BroadcastChannel</title>
+        <pubTime>2018-03-02T15:49:38.000Z</pubTime>
+        
+        <tag>H5</tag>
+         
+         
+           
+             
+              <breadCrumb title="H5" url="https://hexuanzhang.github.io/categories/H5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://hexuanzhang.github.io/2018/03/02/worker/</loc>
     <lastmod>2018-03-02T15:46:57.280Z</lastmod>
     <data>
@@ -396,26 +416,6 @@
 
     
   <url>
-    <loc>https://hexuanzhang.github.io/2017/11/14/%E3%80%8ACSS-%E6%8F%AD%E7%A7%98%E7%AC%94%E8%AE%B0%E3%80%8B/</loc>
-    <lastmod>2017-12-26T13:18:24.404Z</lastmod>
-    <data>
-        <display>
-        <title>《CSS 揭秘笔记》</title>
-        <pubTime>2017-11-14T13:46:57.000Z</pubTime>
-        
-        <tag>css</tag>
-         
-         
-           
-             
-              <breadCrumb title="css" url="https://hexuanzhang.github.io/categories/css/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://hexuanzhang.github.io/2017/12/13/tslint-%E9%94%99%E8%AF%AF%E6%8F%90%E7%A4%BA%E5%BD%92%E7%BA%B3/</loc>
     <lastmod>2017-12-26T13:18:24.404Z</lastmod>
     <data>
@@ -436,19 +436,19 @@
 
     
   <url>
-    <loc>https://hexuanzhang.github.io/2017/11/03/hexo-%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2017-12-26T13:18:24.403Z</lastmod>
+    <loc>https://hexuanzhang.github.io/2017/11/14/%E3%80%8ACSS-%E6%8F%AD%E7%A7%98%E7%AC%94%E8%AE%B0%E3%80%8B/</loc>
+    <lastmod>2017-12-26T13:18:24.404Z</lastmod>
     <data>
         <display>
-        <title>hexo 常见操作</title>
-        <pubTime>2017-11-03T03:08:28.000Z</pubTime>
+        <title>《CSS 揭秘笔记》</title>
+        <pubTime>2017-11-14T13:46:57.000Z</pubTime>
         
-        <tag>hexo</tag>
+        <tag>css</tag>
          
          
            
              
-              <breadCrumb title="hexo" url="https://hexuanzhang.github.io/categories/hexo/"/>
+              <breadCrumb title="css" url="https://hexuanzhang.github.io/categories/css/"/>
           
         </display>
     </data>
@@ -471,6 +471,26 @@
            
              
               <breadCrumb title="javascript" url="https://hexuanzhang.github.io/categories/javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://hexuanzhang.github.io/2017/11/03/hexo-%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/</loc>
+    <lastmod>2017-12-26T13:18:24.403Z</lastmod>
+    <data>
+        <display>
+        <title>hexo 常见操作</title>
+        <pubTime>2017-11-03T03:08:28.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="https://hexuanzhang.github.io/categories/hexo/"/>
           
         </display>
     </data>

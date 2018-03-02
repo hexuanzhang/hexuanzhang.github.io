@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hexuanzhang.github.io/"/>
-  <updated>2018-03-02T15:46:57.280Z</updated>
+  <updated>2018-03-02T15:50:20.635Z</updated>
   <id>https://hexuanzhang.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BroadcastChannel</title>
+    <link href="https://hexuanzhang.github.io/2018/03/02/BroadcastChannel/"/>
+    <id>https://hexuanzhang.github.io/2018/03/02/BroadcastChannel/</id>
+    <published>2018-03-02T15:49:38.000Z</published>
+    <updated>2018-03-02T15:50:20.635Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="BroadcastChannel"><a href="#BroadcastChannel" class="headerlink" title="BroadcastChannel"></a>BroadcastChannel</h2><blockquote><p>  <code>BroadcastChannel</code> 允许同源脚本跨 <code>window / tab</code>、<code>iframe</code>、<code>web worker</code> 进行多对多通信</p></blockquote><h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><p><code>BroadcastChannel</code> 构造函数只接受参数，那就是渠道名称（channel name）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const channel = new BroadcastChannel(&apos;name&apos;);</span><br></pre></td></tr></table></figure><p><code>BroadcastChannel</code> 接口定义如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Constructor(DOMString name), Exposed=(Window,Worker)]</span><br><span class="line">interface BroadcastChannel : EventTarget &#123;</span><br><span class="line">    readonly attribute DOMString name;</span><br><span class="line">    void postMessage(any message);</span><br><span class="line">    void close();</span><br><span class="line">    attribute EventHandler onmessage;</span><br><span class="line">    attribute EventHandler onmessageerror;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><ul><li><code>name</code>：频道名称，用来区分不同频道（跨频道不可通信） </li><li><code>postMessage</code>：广播频道信息</li><li><code>onmessage</code>：接受广播信息</li><li><code>close</code>：停止接受频道信息  </li></ul><h3 id="通信过程"><a href="#通信过程" class="headerlink" title="通信过程"></a>通信过程</h3><p>每个页面创建相同频道名称的 <code>BraodcastChannel</code> 对象并进入频道，通过 <code>onmessage</code> 来接受频道广播的信息，通过 <code>postMessage()</code> 方法可以广播信息给所有加入当前频道的页面。</p><p>本质上，这是在特定频道下的全双工（双向）通信，每个页面都可以在频道中彼此收发任何消息。<strong>不可跨频道通信</strong>。</p><p><code>BroadcastChannel</code> 对象的 <code>close()</code> 只是调用者自己停止接受广播信息，不影响其它页面。</p><p><strong>还有一点需要注意的事，消息事件中传输的对象并不是深拷贝，传输的是对象的引用地址</strong></p><p><img src="http://blog-1255677601.cossh.myqcloud.com/blog/2018-03-02-BroadcastChannel.png" alt=""></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// page A</span><br><span class="line">const a = new BroadcastChannel(&apos;app&apos;);</span><br><span class="line">const list = [&apos;A&apos;, &apos;B&apos;];</span><br><span class="line">a.postMessage(&#123; list &#125;);</span><br><span class="line"></span><br><span class="line">// page B</span><br><span class="line">const b = new BroadcastChannel(&apos;app&apos;)</span><br><span class="line">b.onmessage = function (event) &#123;</span><br><span class="line">    event.data.list.push(&apos;C&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><p>目前除了 <code>BroadcastChannel</code> 外，有好几种信息发送技术，如 <code>WebSockets</code>、<code>SharedWorker</code>、<code>MessageChannel</code> 和 <code>window.postMessage()</code>。不同的技术，适合不同的场景，下面简单的对比下。</p><ul><li><p><code>BroadcastChannel</code> vs <code>postMessage()</code></p><ul><li>前者必须在同域传输，后者允许跨域传输数据</li><li>前者传输的是对象引用地址，后者传输的是经过  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm" target="_blank" rel="noopener">structured clone algorithm</a>  后的数据</li></ul></li><li><p><code>BroadcastChannel</code> vs <code>SharedWorker()</code></p><ul><li>前者只是简单的在多个页面或 <code>worker</code> 之间进行数据传输，后者在服务器与客户端之间的状态管理、资源同步方面更具优势</li></ul></li><li><p><code>BroadcastChannel</code> vs <code>MessagChannel</code></p><ul><li>两者之间最大的区别在于前者是多对多通讯，后者是一对一通讯</li></ul></li></ul><h3 id="polyfills"><a href="#polyfills" class="headerlink" title="polyfills"></a>polyfills</h3><ul><li><a href="https://gist.github.com/alexis89x/041a8e20a9193f3c47fb" target="_blank" rel="noopener">https://gist.github.com/alexis89x/041a8e20a9193f3c47fb</a></li><li><a href="https://gist.github.com/inexorabletash/52f437d1451d12145264" target="_blank" rel="noopener">https://gist.github.com/inexorabletash/52f437d1451d12145264</a></li></ul><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul><li><a href="https://caniuse.com/#search=BroadcastChannel" target="_blank" rel="noopener">caniuse</a></li><li><a href="https://developers.google.com/web/updates/2016/09/broadcastchannel" target="_blank" rel="noopener">BroadcastChannel API: A Message Bus for the Web</a></li><li><a href="https://html.spec.whatwg.org/multipage/web-messaging.html#broadcasting-to-other-browsing-contexts" target="_blank" rel="noopener">BroadcastChannel spec</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;BroadcastChannel&quot;&gt;&lt;a href=&quot;#BroadcastChannel&quot; class=&quot;headerlink&quot; title=&quot;BroadcastChannel&quot;&gt;&lt;/a&gt;BroadcastChannel&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt; 
+      
+    
+    </summary>
+    
+      <category term="H5" scheme="https://hexuanzhang.github.io/categories/H5/"/>
+    
+    
+      <category term="H5" scheme="https://hexuanzhang.github.io/tags/H5/"/>
+    
+  </entry>
   
   <entry>
     <title>web worker</title>
@@ -514,31 +540,6 @@
     
     
       <category term="angular" scheme="https://hexuanzhang.github.io/tags/angular/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>tslint 错误提示归纳</title>
-    <link href="https://hexuanzhang.github.io/2017/12/13/tslint-%E9%94%99%E8%AF%AF%E6%8F%90%E7%A4%BA%E5%BD%92%E7%BA%B3/"/>
-    <id>https://hexuanzhang.github.io/2017/12/13/tslint-错误提示归纳/</id>
-    <published>2017-12-13T10:48:55.000Z</published>
-    <updated>2017-12-26T13:18:24.404Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="组件选择器错误"><a href="#组件选择器错误" class="headerlink" title="组件选择器错误"></a>组件选择器错误</h2><h3 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a>错误信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TSLint: The selector of the component &quot;xxx&quot; should have prefix &quot;app&quot; (https://goo.gl/cix8BY)(component-selector)</span><br></pre></td></tr></table></figure><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><blockquote><p>  修改 <code>tslint.json</code> 中 <code>component-selector</code> 属性值为 false</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;component-selector&quot;: [false, &quot;element&quot;, &quot;app&quot;, &quot;kebab-case&quot;],</span><br></pre></td></tr></table></figure><h2 id="注释错误"><a href="#注释错误" class="headerlink" title="注释错误"></a>注释错误</h2><h3 id="错误信息-1"><a href="#错误信息-1" class="headerlink" title="错误信息"></a>错误信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TSLint: comment must start with a space (comment-format)</span><br></pre></td></tr></table></figure><h3 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法"></a>解决方法</h3><blockquote><p>  修改 <code>tslint.json</code> 中 <code>comment-format</code> 属性值为 false</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;comment-format&quot;: [true,  &quot;check-space&quot;],</span><br></pre></td></tr></table></figure><h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><blockquote><p>  <code>comment-format</code> 属性提供三个参数</p><ul><li><code>check-space</code>：要求所有单行注释必须以空格开头 <code>// comment</code></li><li><code>check-lowercase</code>：要求注释的第一个非空白字符必须为小写</li><li><code>check-uppercase</code>：要求注释的第一个非空白字符必须是大写</li></ul></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;comment-format&quot;: [true, &quot;check-space&quot;, &quot;check-uppercase&quot;]</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;comment-format&quot;: [true, &quot;check-lowercase&quot;, &#123;&quot;ignore-words&quot;: [&quot;TODO&quot;, &quot;HACK&quot;]&#125;]</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;comment-format&quot;: [true, &quot;check-lowercase&quot;, &#123;&quot;ignore-pattern&quot;: &quot;STD\\w&#123;2,3&#125;\\b&quot;&#125;]</span><br></pre></td></tr></table></figure><h2 id="变量声明错误"><a href="#变量声明错误" class="headerlink" title="变量声明错误"></a>变量声明错误</h2><h3 id="错误信息-2"><a href="#错误信息-2" class="headerlink" title="错误信息"></a>错误信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TSLint: Identifier &apos;errMsg&apos; is never reassigned; use &apos;const&apos; instead of &apos;let&apos;. (prefer-const)</span><br></pre></td></tr></table></figure><h3 id="解决方法-2"><a href="#解决方法-2" class="headerlink" title="解决方法"></a>解决方法</h3><blockquote><p>  修改 <code>tslint.json</code> 中 <code>prefer-const</code> 属性值为 false</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;prefer-const&quot;: false</span><br></pre></td></tr></table></figure><h2 id="推断类型错误"><a href="#推断类型错误" class="headerlink" title="推断类型错误"></a>推断类型错误</h2><h3 id="错误信息-3"><a href="#错误信息-3" class="headerlink" title="错误信息"></a>错误信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Type string trivially inferred from a string literal, remove type annotation (no-inferrable-types)</span><br></pre></td></tr></table></figure><h3 id="解决方法-3"><a href="#解决方法-3" class="headerlink" title="解决方法"></a>解决方法</h3><blockquote><p>  ts 不允许对初始化为数字、字符串或布尔值的变量或参数进行显式类型声明<br>  添加 <code>tslint.json</code> 中 <code>no-inferrable-types</code> 属性值 <code>ignore-properties</code></p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;no-inferrable-types&quot;: [true, &quot;ignore-params&quot;, &quot;ignore-properties&quot;]</span><br></pre></td></tr></table></figure><h3 id="扩展-1"><a href="#扩展-1" class="headerlink" title="扩展"></a>扩展</h3><blockquote><p>  <code>no-inferrable-types</code> 属性提供两个参数</p><ul><li><code>ignore-params</code>：允许为函数参数指定不可推出的类型注释</li><li><code>ignore-properties</code>：允许为类属性指定不可推出的类型注释</li></ul></blockquote><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://palantir.github.io/tslint/rules/" target="_blank" rel="noopener">TSLint core rules</a></li><li><a href="https://eslint.org/docs/rules/" target="_blank" rel="noopener">rules</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;组件选择器错误&quot;&gt;&lt;a href=&quot;#组件选择器错误&quot; class=&quot;headerlink&quot; title=&quot;组件选择器错误&quot;&gt;&lt;/a&gt;组件选择器错误&lt;/h2&gt;&lt;h3 id=&quot;错误信息&quot;&gt;&lt;a href=&quot;#错误信息&quot; class=&quot;headerlink&quot; titl
-      
-    
-    </summary>
-    
-      <category term="tslint" scheme="https://hexuanzhang.github.io/categories/tslint/"/>
-    
-    
-      <category term="tslint" scheme="https://hexuanzhang.github.io/tags/tslint/"/>
     
   </entry>
   
