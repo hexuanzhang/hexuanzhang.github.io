@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hexuanzhang.github.io/"/>
-  <updated>2018-03-02T15:50:20.635Z</updated>
+  <updated>2018-03-05T15:58:43.551Z</updated>
   <id>https://hexuanzhang.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS Tips</title>
+    <link href="https://hexuanzhang.github.io/2018/03/05/CSS-Tips/"/>
+    <id>https://hexuanzhang.github.io/2018/03/05/CSS-Tips/</id>
+    <published>2018-03-05T14:15:18.000Z</published>
+    <updated>2018-03-05T15:58:43.551Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="CSS-Tips"><a href="#CSS-Tips" class="headerlink" title="CSS Tips"></a>CSS Tips</h2><h3 id="改变输入框光标颜色"><a href="#改变输入框光标颜色" class="headerlink" title="改变输入框光标颜色"></a>改变输入框光标颜色</h3><ul><li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color" target="_blank" rel="noopener">caret-color</a></p><blockquote><p><code>caret-color</code> 属性不仅对 <code>input</code> 和 <code>textarea</code> 有效，对设置了 <code>contenteditable</code> 属性的 HTML 标签也同样适用</p></blockquote><p><a href="https://codepen.io/zhanghx/pen/yvWZwp" target="_blank" rel="noopener">Demo</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">input,</span><br><span class="line">textarea,</span><br><span class="line">[contenteditable] &#123;</span><br><span class="line">color: #333; /* 文本颜色 */</span><br><span class="line">caret-color: #03a9f4; /* 光标颜色 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>模拟光标</p><blockquote><p><code>caret-color</code> 属性的<a href="https://caniuse.com/#search=caret-color" target="_blank" rel="noopener">兼容性</a>不是很理想，对于不支持的浏览器，可以做兼容处理</p><p> <code>color</code> 指定光标颜色，然后通过 <code>::first-line</code> 伪元素增加优先级设置文字颜色。这种写法也存在兼容问题</p><blockquote><p>对 <code>textarea</code> 元素无效</p><p>win10 下 Edge 浏览器无效</p></blockquote></blockquote><p><a href="https://codepen.io/zhanghx/pen/xYNejd" target="_blank" rel="noopener">Demo</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">input,</span><br><span class="line">texxarea,</span><br><span class="line">[contenteditable] &#123;</span><br><span class="line"></span><br><span class="line">  color: #03a9f4;</span><br><span class="line">  </span><br><span class="line">  &amp;::first-line &#123;</span><br><span class="line">      color: #333;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>兼容性写法</p><p><a href="https://codepen.io/zhanghx/pen/oERRMV" target="_blank" rel="noopener">Demo</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">input,</span><br><span class="line">texxarea,</span><br><span class="line">[contenteditable] &#123;</span><br><span class="line"></span><br><span class="line">  color: #03a9f4;</span><br><span class="line"></span><br><span class="line">  &amp;::first-line &#123;</span><br><span class="line">      color: #333;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@supports (caret-color: #03a9f4) &#123;</span><br><span class="line">  input,</span><br><span class="line">  textarea,</span><br><span class="line">  [contenteditable] &#123;</span><br><span class="line">      color: #333; /* 文本颜色 */</span><br><span class="line">      caret-color: #03a9f4; /* 光标颜色 */</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>​</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;CSS-Tips&quot;&gt;&lt;a href=&quot;#CSS-Tips&quot; class=&quot;headerlink&quot; title=&quot;CSS Tips&quot;&gt;&lt;/a&gt;CSS Tips&lt;/h2&gt;&lt;h3 id=&quot;改变输入框光标颜色&quot;&gt;&lt;a href=&quot;#改变输入框光标颜色&quot; class=&quot;he
+      
+    
+    </summary>
+    
+      <category term="css" scheme="https://hexuanzhang.github.io/categories/css/"/>
+    
+    
+      <category term="css" scheme="https://hexuanzhang.github.io/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>BroadcastChannel</title>
@@ -514,32 +539,6 @@
       <category term="javascript" scheme="https://hexuanzhang.github.io/tags/javascript/"/>
     
       <category term="ES6" scheme="https://hexuanzhang.github.io/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ng-template 和 ng-container</title>
-    <link href="https://hexuanzhang.github.io/2017/12/22/ng-template-%E5%92%8C-ng-container/"/>
-    <id>https://hexuanzhang.github.io/2017/12/22/ng-template-和-ng-container/</id>
-    <published>2017-12-22T12:03:38.000Z</published>
-    <updated>2017-12-26T13:22:50.455Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="ng-template"><a href="#ng-template" class="headerlink" title="ng-template"></a>ng-template</h2><blockquote><p>  <code>ng-template</code>  是 Angular 结构型指令中的一种，用于定义模板渲染 HTML。</p><p>  <strong>定义的模板不会直接显示出来，需要通过其他结构型指令（如</strong> <code>ng-if</code><strong>）或</strong> <code>template-ref</code> <strong>将模块内容渲染到页面中。</strong></p><p>  另外，在渲染页面之前，Angular 会把<ng-template>及其内容替换为注释</ng-template></p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div *ngIf=&quot;isActive; then trueContent else falseContent&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;ng-template #trueContent&gt;</span><br><span class="line">&lt;h3&gt;&#123;&#123;isActive&#125;&#125; template&lt;/h3&gt;</span><br><span class="line">&lt;/ng-template&gt;</span><br><span class="line"></span><br><span class="line">&lt;ng-template #falseContent&gt;</span><br><span class="line">&lt;h3&gt;&#123;&#123;isActive&#125;&#125; template&lt;/h3&gt;</span><br><span class="line">&lt;/ng-template&gt;</span><br></pre></td></tr></table></figure><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fmpllecj9oj30no0iygow.jpg" alt=""></p><h2 id="ng-container"><a href="#ng-container" class="headerlink" title="ng-container"></a>ng-container</h2><blockquote><p>  <code>ng-container</code> 也是Angular 结构型指令中的一种，用于包裹控制内部元素的显示与否。</p><p>  <code>ng-container</code> 可以直接包裹任何元素，包括文本，但本身不会生成元素标签，也不会影响页面样式和布局。<strong>包裹的内容，如果不通过其他指令控制，会直接渲染到页面中。</strong></p><p>  有些元素标签不允许包含其标签，如 ul 中只能包含 li 标签，select 中只能包含 option 标签，这种情况下可以使用 <code>ng-container</code> 指令有效控制标签的显示与否</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">p span &#123; color: red; font-size: 70%; &#125;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;</span><br><span class="line">  I turned the corner</span><br><span class="line">  &lt;span *ngIf=&quot;hero&quot;&gt;</span><br><span class="line">    and saw &#123;&#123;hero.name&#125;&#125;. I waved</span><br><span class="line">  &lt;/span&gt;</span><br><span class="line">  and continued on my way.</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;div *ngFor=&quot;let todo of todos&quot;&gt;</span><br><span class="line">        &lt;li *ngIf=&quot;todo.content !== &apos;Get milk&apos;&quot;&gt;&#123;&#123; todo.content &#125;&#125;&lt;/li&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;ng-container *ngFor=&quot;let todo of todos&quot;&gt;</span><br><span class="line">        &lt;li *ngIf=&quot;todo.content !== &apos;Get milk&apos;&quot;&gt;&#123;&#123; todo.content &#125;&#125;&lt;/li&gt;</span><br><span class="line">    &lt;/ng-container&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fmpn2nb3rej30ks0fadh9.jpg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;ng-template&quot;&gt;&lt;a href=&quot;#ng-template&quot; class=&quot;headerlink&quot; title=&quot;ng-template&quot;&gt;&lt;/a&gt;ng-template&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;  &lt;code&gt;ng-template&lt;/
-      
-    
-    </summary>
-    
-      <category term="angular" scheme="https://hexuanzhang.github.io/categories/angular/"/>
-    
-    
-      <category term="angular" scheme="https://hexuanzhang.github.io/tags/angular/"/>
     
   </entry>
   
