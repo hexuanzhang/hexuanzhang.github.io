@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="青青子衿">
 <meta property="og:description" content="box-decoration-break box-decoration-break 属性属于 CSS 片段模块（CSS Fragmentation Module Level 3）中的一个属性，用于控制行内元素有关于 padding、background、border-image、border、margin 和 clip 属性在行内元素多行情形下的渲染形式 box-decoration-break">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-06T15:09:00.862Z">
+<meta property="og:updated_time" content="2018-03-07T15:58:27.569Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3 不常用属性整理">
 <meta name="twitter:description" content="box-decoration-break box-decoration-break 属性属于 CSS 片段模块（CSS Fragmentation Module Level 3）中的一个属性，用于控制行内元素有关于 padding、background、border-image、border、margin 和 clip 属性在行内元素多行情形下的渲染形式 box-decoration-break">
@@ -285,7 +285,7 @@
                 <span class="post-meta-item-text">发表于</span>
               
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-27T23:07:06+08:00">
-                7 天前
+                8 天前
               </time>
             
 
@@ -301,7 +301,7 @@
                 <span class="post-meta-item-text">更新于&#58;</span>
               
               <time title="更新于" itemprop="dateModified" datetime="2018-03-06T23:03:45+08:00">
-                6 分钟前
+                1 天前
               </time>
             
           </span>
@@ -348,7 +348,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  389
+                  512
                 </span>
               
 
@@ -410,7 +410,7 @@
 </ul>
 <h2 id="text-stroke"><a href="#text-stroke" class="headerlink" title="text-stroke"></a><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-text-stroke" target="_blank" rel="noopener">text-stroke</a></h2><blockquote>
 <p><code>text-stroke</code> 是一个复合属性，用于指定文字的描边信息</p>
-<p>该属性包含两个属性值：</p>
+<p>该属性包含两个属性：</p>
 <blockquote>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-text-stroke-width" target="_blank" rel="noopener"><code>text-stroke-width</code></a>：指定文字描边的宽度，需要加 <code>-webkit-</code> 前缀</li>
@@ -422,6 +422,25 @@
 <h3 id="备注-2"><a href="#备注-2" class="headerlink" title="备注"></a>备注</h3><ul>
 <li><a href="https://codepen.io/zhanghx/pen/vdqwjb" target="_blank" rel="noopener">Demo</a></li>
 <li><a href="https://caniuse.com/#search=text-stroke" target="_blank" rel="noopener">Caniuse</a></li>
+</ul>
+<h2 id="box-reflect"><a href="#box-reflect" class="headerlink" title="box-reflect"></a><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-box-reflect" target="_blank" rel="noopener">box-reflect</a></h2><blockquote>
+<p><code>box-reflect</code> 也是复合属性，用于设置对象的倒影</p>
+<p>该复合属性包含三个属性：</p>
+<blockquote>
+<ul>
+<li><code>direction</code>：倒影的方向（<code>above</code>、<code>below</code>、<code>left</code>、<code>right</code>）</li>
+<li><code>offset</code>：与倒影的间距，<code>length</code> 或 <code>percentage</code>，允许为负值</li>
+<li><code>mask-box-image</code>：创建遮罩图像的方式，取值为 <code>none</code>、<code>url</code>、<code>linear-gradient</code>、<code>radial-gradient</code>、<code>repeat-linear-gradient</code>、<code>repeat-radial-gradient</code></li>
+</ul>
+</blockquote>
+<p>目前仅有 <code>Chrome</code> 、<code>Safari</code> 支持，且需要加 <code>-webkit-</code> 前缀</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-reflect：none | &lt;direction&gt; &lt;offset&gt;? &lt;mask-box-image&gt;?</span><br></pre></td></tr></table></figure>
+<h3 id="备注-3"><a href="#备注-3" class="headerlink" title="备注"></a>备注</h3><ul>
+<li><a href="https://codepen.io/zhanghx/pen/BrByqx" target="_blank" rel="noopener">倒影方向 Demo</a></li>
+<li><a href="https://codepen.io/zhanghx/pen/mxbJOK" target="_blank" rel="noopener">倒影间距 Demo</a></li>
+<li><a href="https://codepen.io/zhanghx/pen/yKBNpe" target="_blank" rel="noopener">倒影遮罩 Demo</a></li>
+<li><a href="https://caniuse.com/#search=box-reflect" target="_blank" rel="noopener">Caniuse</a></li>
 </ul>
 
       
@@ -629,7 +648,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#box-decoration-break"><span class="nav-number">1.</span> <span class="nav-text">box-decoration-break</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#备注"><span class="nav-number">1.1.</span> <span class="nav-text">备注</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#text-fill-color"><span class="nav-number">2.</span> <span class="nav-text">text-fill-color</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#备注-1"><span class="nav-number">2.1.</span> <span class="nav-text">备注</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#text-stroke"><span class="nav-number">3.</span> <span class="nav-text">text-stroke</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#备注-2"><span class="nav-number">3.1.</span> <span class="nav-text">备注</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#box-decoration-break"><span class="nav-number">1.</span> <span class="nav-text">box-decoration-break</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#备注"><span class="nav-number">1.1.</span> <span class="nav-text">备注</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#text-fill-color"><span class="nav-number">2.</span> <span class="nav-text">text-fill-color</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#备注-1"><span class="nav-number">2.1.</span> <span class="nav-text">备注</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#text-stroke"><span class="nav-number">3.</span> <span class="nav-text">text-stroke</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#备注-2"><span class="nav-number">3.1.</span> <span class="nav-text">备注</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#box-reflect"><span class="nav-number">4.</span> <span class="nav-text">box-reflect</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#备注-3"><span class="nav-number">4.1.</span> <span class="nav-text">备注</span></a></li></ol></li></ol></div>
             
 
           </div>
