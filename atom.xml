@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hexuanzhang.github.io/"/>
-  <updated>2018-03-09T12:42:47.639Z</updated>
+  <updated>2018-03-12T13:13:55.342Z</updated>
   <id>https://hexuanzhang.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>聊聊 H5 新增的 rel 属性值</title>
+    <link href="https://hexuanzhang.github.io/2018/03/12/%E5%B1%9E%E6%80%A7/"/>
+    <id>https://hexuanzhang.github.io/2018/03/12/属性/</id>
+    <published>2018-03-12T13:10:20.000Z</published>
+    <updated>2018-03-12T13:13:55.342Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="聊聊-H5-新增的-rel-属性值"><a href="#聊聊-H5-新增的-rel-属性值" class="headerlink" title="聊聊 H5 新增的 rel 属性值"></a>聊聊 H5 新增的 rel 属性值</h2><p>上一篇文章 <a href="https://hexuanzhang.github.io/2018/03/09/ref-noopener%E4%BA%86%E8%A7%A3%E4%B8%8B/#more">《ref=”noopener”了解下》</a> 谈到 <code>rel</code> 属性在 H5 中新增了一个属性值 – <code>noopener</code> ，然后想了解下 <code>rel</code> 其它新增属性值。</p><p>首先先简单回顾下 <code>rel</code> 属性的作用 – <strong>指明当前文档和被链接文档的关系</strong>，这个属性只有在 <code>href</code> 属性存在的情况下使用，我们经常会在  <code>&lt;a&gt;</code> 标签和  <code>&lt;link&gt;</code> 标签中使用。</p><p>之前，我们常用的 <code>rel</code> 属性值有：<code>stylesheet</code>、<code>alternate</code>、<code>icon</code> 等。 下面来看下 H5 又新增了哪些常用的属性值。</p><ul><li><a href="https://html.spec.whatwg.org/multipage/links.html#link-type-license" target="_blank" rel="noopener"><code>license</code></a> ：链接到文档的版权信息，取代了之前的 <code>copyright</code> 属性值</li><li><a href="https://html.spec.whatwg.org/multipage/links.html#link-type-author" target="_blank" rel="noopener"><code>author</code> </a>：链接到文档的作者</li><li><a href="https://html.spec.whatwg.org/multipage/links.html#link-type-external" target="_blank" rel="noopener"><code>exteral</code></a> ：链接到外部资源文档</li><li><a href="https://html.spec.whatwg.org/multipage/links.html#link-type-tag" target="_blank" rel="noopener"><code>tag</code></a> ：指明当前文档的关键词</li><li><a href="https://html.spec.whatwg.org/multipage/links.html#link-type-nofollow" target="_blank" rel="noopener"><code>nofollow</code></a> ：链接到未认可的文档，比如付费链接；Google 使用该属性值来规定其搜索引擎不跟踪该链接</li><li><a href="https://html.spec.whatwg.org/multipage/links.html#link-type-noreferrer" target="_blank" rel="noopener"><code>noreferrer</code></a> ：规定用户打开链接时，浏览器不发送 HTTP Referer 头</li><li><a href="https://html.spec.whatwg.org/multipage/links.html#link-type-dns-prefetch" target="_blank" rel="noopener"><code>dns-prefetch</code></a> ：告知浏览器提前解析指定 URL 的 DNS</li><li><a href="https://html.spec.whatwg.org/multipage/links.html#link-type-preconnect" target="_blank" rel="noopener"><code>preconnect</code></a> ：告知浏览器提前与指定 URL 建立连接（ <code>dns-prefetch</code> + <code>TCP 握手</code> + <code>TLS</code>）</li><li><a href="https://html.spec.whatwg.org/multipage/links.html#link-type-preload" target="_blank" rel="noopener"><code>preload</code></a> ：让浏览器提前加载需要的资源</li><li><a href="https://html.spec.whatwg.org/multipage/links.html#link-type-prefetch" target="_blank" rel="noopener"><code>prefetch</code></a> ：让提前加载后续可能用到的资源并缓存</li><li><a href="https://html.spec.whatwg.org/multipage/links.html#link-type-prerender" target="_blank" rel="noopener"><code>prerender</code></a> ：让浏览器提前加载指定页面的所以资源</li></ul><p>除了上述列出的属性值外，还新增了如：<a href="https://html.spec.whatwg.org/multipage/links.html#link-type-bookmark" target="_blank" rel="noopener"><code>bookmark</code></a>、<a href="https://html.spec.whatwg.org/multipage/links.html#link-type-canonical" target="_blank" rel="noopener"><code>canonical</code></a>、<a href="https://html.spec.whatwg.org/multipage/links.html#link-type-prev" target="_blank" rel="noopener"><code>prev</code></a> 等不常用的属性值，在这就不一一列举出来了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;聊聊-H5-新增的-rel-属性值&quot;&gt;&lt;a href=&quot;#聊聊-H5-新增的-rel-属性值&quot; class=&quot;headerlink&quot; title=&quot;聊聊 H5 新增的 rel 属性值&quot;&gt;&lt;/a&gt;聊聊 H5 新增的 rel 属性值&lt;/h2&gt;&lt;p&gt;上一篇文章 &lt;a h
+      
+    
+    </summary>
+    
+      <category term="H5" scheme="https://hexuanzhang.github.io/categories/H5/"/>
+    
+    
+      <category term="H5" scheme="https://hexuanzhang.github.io/tags/H5/"/>
+    
+  </entry>
   
   <entry>
     <title>ref=&quot;noopener&quot;了解下</title>
@@ -507,33 +532,6 @@
     
     
       <category term="wxLite" scheme="https://hexuanzhang.github.io/tags/wxLite/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>String 编码和解码</title>
-    <link href="https://hexuanzhang.github.io/2017/12/28/String-%E7%BC%96%E7%A0%81%E5%92%8C%E8%A7%A3%E7%A0%81/"/>
-    <id>https://hexuanzhang.github.io/2017/12/28/String-编码和解码/</id>
-    <published>2017-12-27T16:16:10.000Z</published>
-    <updated>2017-12-27T16:56:17.797Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="TextEncoder"><a href="#TextEncoder" class="headerlink" title="TextEncoder"></a>TextEncoder</h2><ul><li><p>构造函数</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const encoder = new TextEncoder();</span><br></pre></td></tr></table></figure><p><img src="http://blog-1255677601.cossh.myqcloud.com/blog/2017-12-27-080800.png" alt=""></p><blockquote><p>  根据指定的编码格式生成 <code>encoder</code> 实例</p><p>  <code>Firefox 48</code> 和 <code>Chrome 53</code> 之后的版本为了与 <a href="https://www.w3.org/TR/encoding/#dom-textencoder" target="_blank" rel="noopener">规范</a> 保持一致，构造函数不需要传递参数，默认的编码格式为 <code>UTF-8</code>，即使传了其他的编码格式，也会调整为 <code>UTF-8</code>；可以通过 <a href="https://github.com/inexorabletash/text-encoding" target="_blank" rel="noopener">polyfill</a> 库，补充不支持的编码格式</p></blockquote></li><li><p>encoding</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new TextEncoder().encoding; // &apos;utf-8&apos;</span><br></pre></td></tr></table></figure><blockquote><p>  只读属性，返回指定的编码格式</p></blockquote></li><li><p>encode()</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new TextEncoder() . encode([input = &quot;&quot;])</span><br></pre></td></tr></table></figure><p><img src="http://blog-1255677601.cossh.myqcloud.com/blog/2017-12-27-080919.png" alt=""></p><blockquote><p>  返回编码后的字符对象（<code>Unit8Array</code> 格式）</p></blockquote></li></ul><h2 id="TextDecoder"><a href="#TextDecoder" class="headerlink" title="TextDecoder"></a>TextDecoder</h2><ul><li><p>构造函数</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">decoder = new TextDecoder([label = &quot;utf-8&quot; [, options]])</span><br></pre></td></tr></table></figure><p><img src="http://blog-1255677601.cossh.myqcloud.com/blog/2017-12-27-090851.png" alt=""></p><blockquote><p>  根据指定的解码格式生成 <code>decoder</code> 实例</p><p>  如果提供未知或模棱两可的解码格式 ，会报 <code>RangeError</code></p><p>  options：包含 <code>fatal</code> 、<code>ignoreBOM</code> 属性的 <code>TextDecoderOptions</code> 对象</p><blockquote><p>  fatal：布尔值，指明在解码过程中发生的错误是否需要抛出，默认为 false</p><p>  ignoreBOM：布尔值，是否忽略字节顺序标记（Byte Order Mark）</p></blockquote></blockquote></li><li><p>fatal</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new TextDecoder().fatal;</span><br></pre></td></tr></table></figure><blockquote><p>  只读属性，指明在解码过程中发生的错误是否需要抛出</p></blockquote></li><li><p>ignoreBOM</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new TextDecoder().ignoreBOM;</span><br></pre></td></tr></table></figure><blockquote><p>  只读属性，是否忽略字节顺序标记</p></blockquote></li><li><p>decode()</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new TextDecoder().decode([input [, options]]);</span><br></pre></td></tr></table></figure><p><img src="http://blog-1255677601.cossh.myqcloud.com/blog/2017-12-27-093450.png" alt=""></p><blockquote><p>  根据指定的解码方式对编码数据进行解码，并返回解码后的字符串数据</p><p>  input：需要解码的数据（<code>ArrayBuffer</code> 格式或 <code>ArrayBufferView</code> 格式）</p><p>  options：包含 <code>stream</code> 属性的 <code>TextDecodeOptions</code> 对象</p><blockquote><p>  stream：布尔值，是否需要解码额外的数据</p></blockquote></blockquote></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const text = &apos;hello word&apos;;</span><br><span class="line"></span><br><span class="line">const encode_text = new TextEncoder().encode(text);</span><br><span class="line"></span><br><span class="line">const decode_text = new TextDecoder(&apos;utf-8&apos;, &#123;fatal: true&#125;).decode(encode_text);</span><br><span class="line"></span><br><span class="line">console.info(Object.is(text, decode_text)); // true</span><br></pre></td></tr></table></figure><h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><table><thead><tr><th>浏览器</th><th>支持情况</th></tr></thead><tbody><tr><td>IE8 ~ IE11</td><td>不支持</td></tr><tr><td>Edge</td><td>暂不支持，在 <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/encodingstandard/" target="_blank" rel="noopener">开发阶段</a></td></tr><tr><td>Chrome</td><td>支持</td></tr><tr><td>Firefox</td><td>支持</td></tr><tr><td>Safari</td><td>10.1+ 版本支持</td></tr></tbody></table><h3 id="兼容代码"><a href="#兼容代码" class="headerlink" title="兼容代码"></a>兼容代码</h3><blockquote><p>待善对中文的兼容</p></blockquote><ul><li><p>encode</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function encode(text)&#123;</span><br><span class="line">     const textString = String(text),</span><br><span class="line">        textArray = textString.split(&apos;&apos;);</span><br><span class="line"></span><br><span class="line">     for (let i = 0; i &lt; textArray.length; i++) &#123;</span><br><span class="line">        textArray[i] = textArray[i].charCodeAt(0)</span><br><span class="line">     &#125;;</span><br><span class="line"></span><br><span class="line">     return new Uint8Array(textArray);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="http://oyzpu0yr9.bkt.clouddn.com/blog/171228/dHd1BF0IDh.png?imageslim" alt="mark"></p></li><li><p>decode</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function decode(textBuffer)&#123;</span><br><span class="line">    const textArray = Array.from(new Uint8Array(textBuffer)),</span><br><span class="line">        textHex = textArray.map(b =&gt; (&apos;00&apos; + b.toString(16)).slice(-2)).join(&apos;&apos;);</span><br><span class="line"></span><br><span class="line">    return unescape(textHex.replace(/(..)/g,&quot;%$1&quot;));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="http://oyzpu0yr9.bkt.clouddn.com/blog/171228/IFG8F3B98K.png?imageslim" alt="mark"></p></li></ul><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li><a href="https://developers.google.com/web/updates/2014/08/Easier-ArrayBuffer-String-conversion-with-the-Encoding-API" target="_blank" rel="noopener">Easier ArrayBuffer to String conversion with the Encoding API</a></li><li><a href="https://encoding.spec.whatwg.org/" target="_blank" rel="noopener">spec</a></li><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/TextDecoder" target="_blank" rel="noopener">MDN</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;TextEncoder&quot;&gt;&lt;a href=&quot;#TextEncoder&quot; class=&quot;headerlink&quot; title=&quot;TextEncoder&quot;&gt;&lt;/a&gt;TextEncoder&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;构造函数&lt;/p&gt;
-&lt;figure class=&quot;h
-      
-    
-    </summary>
-    
-      <category term="javascript" scheme="https://hexuanzhang.github.io/categories/javascript/"/>
-    
-    
-      <category term="javascript" scheme="https://hexuanzhang.github.io/tags/javascript/"/>
     
   </entry>
   
