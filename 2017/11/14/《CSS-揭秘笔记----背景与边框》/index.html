@@ -84,15 +84,17 @@
 <meta name="description" content="背景与边框半透明边框问题   通常情况下，背景（色或图片）会延伸至元素边框外沿（但在边框下面），这种情况会导致边框和背景产生重叠，半透明边框呈现出来的是背景，无法实现半透明边框  解决方案   通过 background-clip 属性调整元素背景延伸范围  Demo 1234567background-clip: [border-box] |[padding-box] | [content-bo">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《CSS 揭秘笔记》">
-<meta property="og:url" content="https://hexuanzhang.github.io/2017/11/14/《CSS-揭秘笔记》/index.html">
+<meta property="og:title" content="《CSS 揭秘笔记 -- 背景与边框》">
+<meta property="og:url" content="https://hexuanzhang.github.io/2017/11/14/《CSS-揭秘笔记----背景与边框》/index.html">
 <meta property="og:site_name" content="青青子衿">
 <meta property="og:description" content="背景与边框半透明边框问题   通常情况下，背景（色或图片）会延伸至元素边框外沿（但在边框下面），这种情况会导致边框和背景产生重叠，半透明边框呈现出来的是背景，无法实现半透明边框  解决方案   通过 background-clip 属性调整元素背景延伸范围  Demo 1234567background-clip: [border-box] |[padding-box] | [content-bo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-26T13:18:24.404Z">
+<meta property="og:image" content="http://oyzpu0yr9.bkt.clouddn.com/blog/180313/19dEilKiEm.png?imageslim">
+<meta property="og:updated_time" content="2018-03-13T14:13:02.774Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《CSS 揭秘笔记》">
+<meta name="twitter:title" content="《CSS 揭秘笔记 -- 背景与边框》">
 <meta name="twitter:description" content="背景与边框半透明边框问题   通常情况下，背景（色或图片）会延伸至元素边框外沿（但在边框下面），这种情况会导致边框和背景产生重叠，半透明边框呈现出来的是背景，无法实现半透明边框  解决方案   通过 background-clip 属性调整元素背景延伸范围  Demo 1234567background-clip: [border-box] |[padding-box] | [content-bo">
+<meta name="twitter:image" content="http://oyzpu0yr9.bkt.clouddn.com/blog/180313/19dEilKiEm.png?imageslim">
 
 
 
@@ -122,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://hexuanzhang.github.io/2017/11/14/《CSS-揭秘笔记》/"/>
+  <link rel="canonical" href="https://hexuanzhang.github.io/2017/11/14/《CSS-揭秘笔记----背景与边框》/"/>
 
 
 
 
 
-  <title>《CSS 揭秘笔记》 | 青青子衿</title>
+  <title>《CSS 揭秘笔记 -- 背景与边框》 | 青青子衿</title>
   
 
 
@@ -255,7 +257,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hexuanzhang.github.io/2017/11/14/《CSS-揭秘笔记》/">
+    <link itemprop="mainEntityOfPage" href="https://hexuanzhang.github.io/2017/11/14/《CSS-揭秘笔记----背景与边框》/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="青青子衿">
@@ -272,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">《CSS 揭秘笔记》</h1>
+          <h1 class="post-title" itemprop="name headline">《CSS 揭秘笔记 -- 背景与边框》</h1>
         
 
         <div class="post-meta">
@@ -300,8 +302,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-24T22:22:10+08:00">
-                4 个月前
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-13T20:26:33+08:00">
+                2 小时前
               </time>
             
           </span>
@@ -348,7 +350,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  463
+                  1,025
                 </span>
               
 
@@ -364,7 +366,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  5
                 </span>
               
             </div>
@@ -392,7 +394,7 @@
 <p>  通过 <code>background-clip</code> 属性调整元素背景延伸范围</p>
 </blockquote>
 <p><a href="https://codepen.io/zhanghx/pen/YExKYK" target="_blank" rel="noopener">Demo</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">background-clip: [border-box] |[padding-box] | [content-box];</span><br><span class="line"></span><br><span class="line">hsla(&lt;色相&gt;, &lt;饱和度&gt;, &lt;明度&gt;, &lt;透明度&gt;)</span><br><span class="line">色相：0~360</span><br><span class="line">饱和度：0%~1000% </span><br><span class="line">明度： 0%（黑色）~100%（白色）</span><br><span class="line">透明度：0~1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">background-clip: [border-box] |[padding-box] | [content-box];</span><br><span class="line"></span><br><span class="line">hsla(&lt;色相&gt;, &lt;饱和度&gt;, &lt;明度&gt;, &lt;透明度&gt;)</span><br><span class="line">色相：0~360</span><br><span class="line">饱和度：0%~1000%</span><br><span class="line">明度： 0%（黑色）~100%（白色）</span><br><span class="line">透明度：0~1</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">border: 10px solid hsla(175, 100%, 60%, .5);</span><br><span class="line">background-clip: padding-box;</span><br><span class="line">background: #03a9f4;</span><br></pre></td></tr></table></figure>
 <h2 id="多重边框"><a href="#多重边框" class="headerlink" title="多重边框"></a>多重边框</h2><blockquote>
 <p>  实现多重边框</p>
@@ -416,6 +418,45 @@
 <h3 id="calc-方案"><a href="#calc-方案" class="headerlink" title="calc 方案"></a>calc 方案</h3><p><a href="https://codepen.io/zhanghx/pen/GOGdxV" target="_blank" rel="noopener">Demo</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">calc: (四则运算)</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">background: url(code-pirate.svg) no-repeat bottom right #58a;</span><br><span class="line">background-position: calc(100% - 20px) calc(100% - 10px);</span><br></pre></td></tr></table></figure>
+<h3 id="边框内圆角"><a href="#边框内圆角" class="headerlink" title="边框内圆角"></a>边框内圆角</h3><blockquote>
+<p>实现一个内侧为圆角，外侧仍为直角的容器</p>
+</blockquote>
+<h4 id="两个元素解决方案"><a href="#两个元素解决方案" class="headerlink" title="两个元素解决方案"></a>两个元素解决方案</h4><p><a href="https://codepen.io/zhanghx/pen/MVaNBm" target="_blank" rel="noopener">Demo</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;outer&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;inner&quot;&gt;边框内圆角效果&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.outer &#123;</span><br><span class="line">  background-color: #655;</span><br><span class="line">  padding: 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.inner &#123;</span><br><span class="line">  border-radius: 5px;</span><br><span class="line">  background-color: tan;</span><br><span class="line">  padding: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="一个元素解决方案"><a href="#一个元素解决方案" class="headerlink" title="一个元素解决方案"></a>一个元素解决方案</h4><blockquote>
+<p>这种方案主要是利用 <code>outline</code> 不会跟着圆角走的特性，并通过 <code>box-shadow</code> 填充 <code>outline</code> 与 <code>border</code> 之间的间隙，从而达到想要的效果</p>
+<p>需要注意的是，<code>box-shadow</code> 的投影扩张值需大于 <code>(√2 - 1)*r</code>，<code>r</code> 为 <code>border-radius</code> 长度</p>
+</blockquote>
+<p><a href="https://codepen.io/zhanghx/pen/mxeNNb" target="_blank" rel="noopener">Demo</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;inner-round&quot;&gt;边框内圆角效果&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.inner-round &#123;</span><br><span class="line">  border-radius: 5px;</span><br><span class="line">  background-color: tan;</span><br><span class="line">  padding: 10px;</span><br><span class="line"></span><br><span class="line">  box-shadow: 0 0 0 2.5px #655; // 0.5 * 5 &gt; (√2 - 1)*5</span><br><span class="line">  outline: 10px solid #655;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="对比-1"><a href="#对比-1" class="headerlink" title="对比"></a>对比</h4><p>两个元素的方案相对一个元素的方案更加灵活性，因为后者的 <code>outline</code> 无法像 <code>border</code> 一样灵活。</p>
+<h3 id="条纹背景"><a href="#条纹背景" class="headerlink" title="条纹背景"></a>条纹背景</h3><blockquote>
+<p>实现条纹背景效果，如水平条纹、垂直条纹、斜向条纹、同色条纹</p>
+</blockquote>
+<h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><blockquote>
+<p><code>linear-gradient</code> 配合 <code>background-size</code></p>
+</blockquote>
+<p><img src="http://oyzpu0yr9.bkt.clouddn.com/blog/180313/19dEilKiEm.png?imageslim" alt="mark"></p>
+<p>根据上面的<a href="https://drafts.csswg.org/css-images-3/#color-stop" target="_blank" rel="noopener">规范</a>可知：</p>
+<ul>
+<li>默认第一个颜色的色标起始位置为 0%，最后一个颜色的色标起始位置为 100%</li>
+<li>如果某个色标的起始位置值比在它之前的色标的起始位置都要小，则该色标的起始位置会被设置它前面所以色标起始位置值的最大值</li>
+<li>如果所有色标都未设置起始位置，则会默认给每种色标平均分配空间</li>
+<li>如果多个色标的起始位置相同，那么它会之间会差生一个无限小的过渡区块，过度的起止色分别是第一个和最后一个指定值。从效果上看，颜色会在那个位置突然变化，而不是一个平滑的渐变过程</li>
+</ul>
+<ul>
+<li><p>水平条纹</p>
+<p><a href="https://codepen.io/zhanghx/pen/xWZKJo" target="_blank" rel="noopener">Demo</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;horizontal-stripes&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.horizontal-stripes &#123;</span><br><span class="line">  height: 60px;</span><br><span class="line">  width: 300px;</span><br><span class="line"></span><br><span class="line">  background-image: linear-gradient(#fb3 50%, #58a 50%);</span><br><span class="line">  background-repeat: repeat;</span><br><span class="line">  background-size: 100% 30px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>垂直条纹</p>
+<p><a href="https://codepen.io/zhanghx/pen/zWrxPE" target="_blank" rel="noopener">Demo</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.vertical-stripes &#123;</span><br><span class="line">  width: 300px;</span><br><span class="line">  height: 60px;</span><br><span class="line"></span><br><span class="line">  background-image: linear-gradient(to right, #fb3 50%, #58a 0);</span><br><span class="line">  background-repeat: repeat;</span><br><span class="line">  background-size: 75px 100%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -436,7 +477,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://hexuanzhang.github.io/2017/11/14/《CSS-揭秘笔记》/" title="《CSS 揭秘笔记》">https://hexuanzhang.github.io/2017/11/14/《CSS-揭秘笔记》/</a>
+    <a href="https://hexuanzhang.github.io/2017/11/14/《CSS-揭秘笔记----背景与边框》/" title="《CSS 揭秘笔记 -- 背景与边框》">https://hexuanzhang.github.io/2017/11/14/《CSS-揭秘笔记----背景与边框》/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -622,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景与边框"><span class="nav-number">1.</span> <span class="nav-text">背景与边框</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#半透明边框"><span class="nav-number">1.1.</span> <span class="nav-text">半透明边框</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题"><span class="nav-number">1.1.1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案"><span class="nav-number">1.1.2.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多重边框"><span class="nav-number">2.</span> <span class="nav-text">多重边框</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#box-shadow-方案"><span class="nav-number">2.1.</span> <span class="nav-text">box-shadow 方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#outline-方案"><span class="nav-number">2.2.</span> <span class="nav-text">outline 方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对比"><span class="nav-number">2.3.</span> <span class="nav-text">对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#灵活的背景定位"><span class="nav-number">3.</span> <span class="nav-text">灵活的背景定位</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#background-方案"><span class="nav-number">3.1.</span> <span class="nav-text">background 方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#calc-方案"><span class="nav-number">3.2.</span> <span class="nav-text">calc 方案</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景与边框"><span class="nav-number">1.</span> <span class="nav-text">背景与边框</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#半透明边框"><span class="nav-number">1.1.</span> <span class="nav-text">半透明边框</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题"><span class="nav-number">1.1.1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案"><span class="nav-number">1.1.2.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多重边框"><span class="nav-number">2.</span> <span class="nav-text">多重边框</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#box-shadow-方案"><span class="nav-number">2.1.</span> <span class="nav-text">box-shadow 方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#outline-方案"><span class="nav-number">2.2.</span> <span class="nav-text">outline 方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对比"><span class="nav-number">2.3.</span> <span class="nav-text">对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#灵活的背景定位"><span class="nav-number">3.</span> <span class="nav-text">灵活的背景定位</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#background-方案"><span class="nav-number">3.1.</span> <span class="nav-text">background 方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#calc-方案"><span class="nav-number">3.2.</span> <span class="nav-text">calc 方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#边框内圆角"><span class="nav-number">3.3.</span> <span class="nav-text">边框内圆角</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#两个元素解决方案"><span class="nav-number">3.3.1.</span> <span class="nav-text">两个元素解决方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一个元素解决方案"><span class="nav-number">3.3.2.</span> <span class="nav-text">一个元素解决方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对比-1"><span class="nav-number">3.3.3.</span> <span class="nav-text">对比</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条纹背景"><span class="nav-number">3.4.</span> <span class="nav-text">条纹背景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案-1"><span class="nav-number">3.4.1.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
