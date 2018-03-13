@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="H5," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="青青子衿" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="新增元素wbr描述Word Break Opportunity (&amp;lt;wbr&amp;gt;)，用于告诉浏览器在页面缩放时在什么地方添加换行符。 兼容性除 IE 外，其他浏览器都兼容。 其他 Demo  template描述顾名思义，声明的是模板元素，用户存储可能需要插入到页面中的内容片段。 页面加载时，解析器会处理 template 元素中的内容，但不会渲染元素的内容。 根据 Template 接口">
+<meta name="keywords" content="H5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H5 新增标签">
+<meta property="og:url" content="https://hexuanzhang.github.io/2018/03/13/H5-新增标签/index.html">
+<meta property="og:site_name" content="青青子衿">
+<meta property="og:description" content="新增元素wbr描述Word Break Opportunity (&amp;lt;wbr&amp;gt;)，用于告诉浏览器在页面缩放时在什么地方添加换行符。 兼容性除 IE 外，其他浏览器都兼容。 其他 Demo  template描述顾名思义，声明的是模板元素，用户存储可能需要插入到页面中的内容片段。 页面加载时，解析器会处理 template 元素中的内容，但不会渲染元素的内容。 根据 Template 接口">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-13T12:05:35.875Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="H5 新增标签">
+<meta name="twitter:description" content="新增元素wbr描述Word Break Opportunity (&amp;lt;wbr&amp;gt;)，用于告诉浏览器在页面缩放时在什么地方添加换行符。 兼容性除 IE 外，其他浏览器都兼容。 其他 Demo  template描述顾名思义，声明的是模板元素，用户存储可能需要插入到页面中的内容片段。 页面加载时，解析器会处理 template 元素中的内容，但不会渲染元素的内容。 根据 Template 接口">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://hexuanzhang.github.io/2018/03/13/H5-新增标签/"/>
+
+
+
+
+
+  <title>H5 新增标签 | 青青子衿</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">青青子衿</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hexuanzhang.github.io/2018/03/13/H5-新增标签/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="青青子衿">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="青青子衿">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">H5 新增标签</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-13T20:03:11+08:00">
+                3 分钟前
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/H5/" itemprop="url" rel="index">
+                    <span itemprop="name">H5</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,126
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="新增元素"><a href="#新增元素" class="headerlink" title="新增元素"></a>新增元素</h2><h3 id="wbr"><a href="#wbr" class="headerlink" title="wbr"></a><a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-wbr-element" target="_blank" rel="noopener">wbr</a></h3><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><p>Word Break Opportunity (<code>&lt;wbr&gt;</code>)，用于告诉浏览器在页面缩放时在什么地方添加换行符。</p>
+<h4 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a><a href="https://caniuse.com/#search=wbr" target="_blank" rel="noopener">兼容性</a></h4><p>除 IE 外，其他浏览器都兼容。</p>
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><ul>
+<li><a href="https://codepen.io/zhanghx/full/KodoVJ" target="_blank" rel="noopener">Demo</a></li>
+</ul>
+<h3 id="template"><a href="#template" class="headerlink" title="template"></a><a href="https://html.spec.whatwg.org/multipage/scripting.html#the-template-element" target="_blank" rel="noopener">template</a></h3><h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><p>顾名思义，声明的是模板元素，用户存储可能需要插入到页面中的内容片段。</p>
+<p>页面加载时，解析器会处理 <code>template</code> 元素中的内容，但不会渲染元素的内容。</p>
+<p>根据 Template 接口可知，它有一个只读的 <code>content</code> 属性，通过这个属性可以读取模板内容，也可以通过这个属性判断l浏览器是否支持 <code>&lt;template&gt;</code> 元素。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">interface HTMLTemplateElement : HTMLElement &#123;</span><br><span class="line">    readonly attribute DocumentFragment content;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h4><p>除了 <code>template</code> 元素外，还有一种常用的方式实现标签内容隐藏。<br>两者相对比，<code>template</code> 元素可以直接克隆节点插入到页面中，而 <code>script</code> 方式只是以字符串的方式处理内部的 HTML 标签。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script id=&quot;script-template&quot; type=&quot;text/template&quot;&gt;</span><br><span class="line">    &lt;img src=&quot;http://blog-1255677601.cossh.myqcloud.com/blog/2018-03-13-u-1459597530-2091940659%26fm-27%26gp-0.jpg&quot; alt=&quot;&quot;&gt;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">const imgTemplate = document.getElementById(&apos;script-template&apos;),</span><br><span class="line">      container = document.getElementById(&apos;container&apos;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">container.innerHTML = imgTemplate.innerHTML;</span><br></pre></td></tr></table></figure>
+<h4 id="兼容性-1"><a href="#兼容性-1" class="headerlink" title="兼容性"></a><a href="https://caniuse.com/#search=HTML%20templates" target="_blank" rel="noopener">兼容性</a></h4><p>除 IE 外，其他浏览器都兼容；另外 Edge 不支持 对 <code>template</code> 元素进行克隆操作以及模板相互嵌套。</p>
+<h4 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h4><ul>
+<li><a href="https://codepen.io/zhanghx/pen/GxpdmL" target="_blank" rel="noopener">Demo</a></li>
+</ul>
+<h3 id="section"><a href="#section" class="headerlink" title="section"></a><a href="https://html.spec.whatwg.org/multipage/sections.html#the-section-element" target="_blank" rel="noopener">section</a></h3><h4 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h4><p><code>section</code> 表示文档的一个区域或章节，按主题将内容分组，通常会包含一个标题（<code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>）。<br>一般来说，希望元素内容明确地出现在提纲中时，用 <code>section</code> 就合适。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;section&gt;</span><br><span class="line">    &lt;h3&gt;曙光女神&lt;/h3&gt;</span><br><span class="line">    &lt;p&gt;无论刮风还是下雨 太阳照常升起&lt;/p&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="兼容性-2"><a href="#兼容性-2" class="headerlink" title="兼容性"></a><a href="https://caniuse.com/#search=section" target="_blank" rel="noopener">兼容性</a></h4><p>除 IE9 以下外，其他浏览器都支持</p>
+<h3 id="nav"><a href="#nav" class="headerlink" title="nav"></a><a href="https://html.spec.whatwg.org/multipage/sections.html#the-nav-element" target="_blank" rel="noopener">nav</a></h3><p><code>nav</code> 表示包含多个超链接的区域。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;nav&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;</span><br><span class="line">            &lt;a href=&quot;/home&quot;&gt;首页&lt;/a&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        &lt;li&gt;</span><br><span class="line">            &lt;a href=&quot;/about&quot;&gt;关于我&lt;/a&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        &lt;li&gt;</span><br><span class="line">            &lt;a href=&quot;/contact&quot;&gt;联系我&lt;/a&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/nav&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="兼容性-3"><a href="#兼容性-3" class="headerlink" title="兼容性"></a><a href="https://caniuse.com/#search=New%20semantic%20elements" target="_blank" rel="noopener">兼容性</a></h4><p>除 IE9 以下外，其他浏览器都支持</p>
+<h3 id="article"><a href="#article" class="headerlink" title="article"></a><a href="https://html.spec.whatwg.org/multipage/sections.html#the-article-element" target="_blank" rel="noopener">article</a></h3><p><code>article</code> 代表文档、页面或应用程序中独立的、完整的、可以独自被外界引用的内容。</p>
+<h4 id="扩展-1"><a href="#扩展-1" class="headerlink" title="扩展"></a>扩展</h4><p>与 <code>section</code> 元素的区别：</p>
+<ul>
+<li><code>section</code>：主要作用是对网站或应用程序中页面上的内容进行分块，通过它的嵌套来表示的章节等目录结构和它们的从属关系</li>
+<li><code>article</code>：主要作用是表示完整、独立性、可重用，即标签内容脱离当前页面也有存在价值和意义，它可以有自己 <code>header</code> 和 <code>footer</code></li>
+</ul>
+<p>两种标签可以相互嵌套使用，但如果只是作为样式钩子，建议使用 <code>&lt;div&gt;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;article&gt;</span><br><span class="line">    &lt;header&gt;</span><br><span class="line">        &lt;h1&gt;苹果&lt;/h1&gt;</span><br><span class="line">    &lt;/header&gt;</span><br><span class="line"></span><br><span class="line">    &lt;p&gt;苹果是一种很好的水果。&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">    &lt;section&gt;</span><br><span class="line">        &lt;h2&gt;评论&lt;/h2&gt;</span><br><span class="line"></span><br><span class="line">        &lt;article&gt;</span><br><span class="line">            &lt;header&gt;</span><br><span class="line">                &lt;h3&gt;发表者：张三&lt;/h3&gt;</span><br><span class="line">            &lt;/header&gt;</span><br><span class="line">            &lt;p&gt;苹果好吃&lt;/p&gt;</span><br><span class="line">        &lt;/article&gt;</span><br><span class="line"></span><br><span class="line">        &lt;article&gt;</span><br><span class="line">            &lt;header&gt;</span><br><span class="line">                &lt;h3&gt;发表者：李四&lt;/h3&gt;</span><br><span class="line">            &lt;/header&gt;</span><br><span class="line">            &lt;p&gt;苹果对身体好&lt;/p&gt;</span><br><span class="line">        &lt;/article&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/section&gt;</span><br><span class="line">&lt;/article&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="兼容性-4"><a href="#兼容性-4" class="headerlink" title="兼容性"></a><a href="https://caniuse.com/#search=New%20semantic%20elements" target="_blank" rel="noopener">兼容性</a></h4><p>除 IE9 以下外，其他浏览器都支持</p>
+<h3 id="aside"><a href="#aside" class="headerlink" title="aside"></a><a href="https://html.spec.whatwg.org/multipage/sections.html#the-address-element" target="_blank" rel="noopener">aside</a></h3><h4 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h4><p><code>aside</code> 元素表示与页面内容关系不太密切的内容 (eg. 广告) ，可以独立出来且不影响整体，通常表现为侧边栏或者嵌入内容（更侧重于工具性的东西）。</p>
+<h4 id="兼容性-5"><a href="#兼容性-5" class="headerlink" title="兼容性"></a><a href="https://caniuse.com/#search=New%20semantic%20elements" target="_blank" rel="noopener">兼容性</a></h4><p>除 IE9 以下外，其他浏览器都支持</p>
+<h3 id="header"><a href="#header" class="headerlink" title="header"></a><a href="https://html.spec.whatwg.org/multipage/sections.html#the-header-element" target="_blank" rel="noopener">header</a></h3><h4 id="描述-4"><a href="#描述-4" class="headerlink" title="描述"></a>描述</h4><p><code>header</code> 元素表示一组介绍性描述或导航信息 (目录、搜索框、logo 等)，通常包含 <code>&lt;h1&gt;</code> – <code>&lt;h6&gt;</code> 或 <code>&lt;hgroup&gt;</code>，元素内容不影响文档提纲的生成。</p>
+<h4 id="兼容性-6"><a href="#兼容性-6" class="headerlink" title="兼容性"></a><a href="https://caniuse.com/#search=New%20semantic%20elements" target="_blank" rel="noopener">兼容性</a></h4><p>除 IE9 以下外，其他浏览器都支持</p>
+<h3 id="footer"><a href="#footer" class="headerlink" title="footer"></a><a href="https://html.spec.whatwg.org/multipage/sections.html#the-footer-element" target="_blank" rel="noopener">footer</a></h3><h4 id="描述-5"><a href="#描述-5" class="headerlink" title="描述"></a>描述</h4><p><code>footer</code> 元素表示最近的父级区块内容的页脚，通常包含作者信息、相关文档、版权信息，元素内容不影响文档提纲的生成。</p>
+<h4 id="兼容性-7"><a href="#兼容性-7" class="headerlink" title="兼容性"></a><a href="https://caniuse.com/#search=New%20semantic%20elements" target="_blank" rel="noopener">兼容性</a></h4><p>除 IE9 以下外，其他浏览器都支持</p>
+<h3 id="adress"><a href="#adress" class="headerlink" title="adress"></a><a href="https://html.spec.whatwg.org/multipage/sections.html#the-address-element" target="_blank" rel="noopener">adress</a></h3><h4 id="描述-6"><a href="#描述-6" class="headerlink" title="描述"></a>描述</h4><p><code>adress</code> 元素表示与最近父级 <code>article</code> 或整个文档关联的联系人信息，不能包含除了联系信息之外的任何信息。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;address&gt;</span><br><span class="line">    You can contact author at &lt;a href=&quot;http://www.somedomain.com/contact&quot;&gt;www.somedomain.com&lt;/a&gt;.&lt;br&gt;</span><br><span class="line">    If you see any bugs, please &lt;a href=&quot;mailto:webmaster@somedomain.com&quot;&gt;contact webmaster&lt;/a&gt;.&lt;br&gt;</span><br><span class="line">    You may also want to visit us:&lt;br&gt;</span><br><span class="line">    Mozilla Foundation&lt;br&gt;</span><br><span class="line">    1981 Landings Drive&lt;br&gt;</span><br><span class="line">    Building K&lt;br&gt;</span><br><span class="line">    Mountain View, CA 94043-0801&lt;br&gt;</span><br><span class="line">    USA</span><br><span class="line">&lt;/address&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="兼容性-8"><a href="#兼容性-8" class="headerlink" title="兼容性"></a><a href="https://caniuse.com/#search=New%20semantic%20elements" target="_blank" rel="noopener">兼容性</a></h4><p>除 IE9 以下外，其他浏览器都支持</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    青青子衿
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://hexuanzhang.github.io/2018/03/13/H5-新增标签/" title="H5 新增标签">https://hexuanzhang.github.io/2018/03/13/H5-新增标签/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/H5/" rel="tag"># H5</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/12/聊聊 H5 新增的 rel 属性值/" rel="next" title="聊聊 H5 新增的 rel 属性值">
+                <i class="fa fa-chevron-left"></i> 聊聊 H5 新增的 rel 属性值
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">青青子衿</p>
+              <p class="site-description motion-element" itemprop="description">青青子衿，悠悠我心</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#新增元素"><span class="nav-number">1.</span> <span class="nav-text">新增元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#wbr"><span class="nav-number">1.1.</span> <span class="nav-text">wbr</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#描述"><span class="nav-number">1.1.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#兼容性"><span class="nav-number">1.1.2.</span> <span class="nav-text">兼容性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他"><span class="nav-number">1.1.3.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#template"><span class="nav-number">1.2.</span> <span class="nav-text">template</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#描述-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展"><span class="nav-number">1.2.2.</span> <span class="nav-text">扩展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#兼容性-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">兼容性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他-1"><span class="nav-number">1.2.4.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section"><span class="nav-number">1.3.</span> <span class="nav-text">section</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#描述-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#兼容性-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">兼容性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nav"><span class="nav-number">1.4.</span> <span class="nav-text">nav</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#兼容性-3"><span class="nav-number">1.4.1.</span> <span class="nav-text">兼容性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#article"><span class="nav-number">1.5.</span> <span class="nav-text">article</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展-1"><span class="nav-number">1.5.1.</span> <span class="nav-text">扩展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#兼容性-4"><span class="nav-number">1.5.2.</span> <span class="nav-text">兼容性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#aside"><span class="nav-number">1.6.</span> <span class="nav-text">aside</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#描述-3"><span class="nav-number">1.6.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#兼容性-5"><span class="nav-number">1.6.2.</span> <span class="nav-text">兼容性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#header"><span class="nav-number">1.7.</span> <span class="nav-text">header</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#描述-4"><span class="nav-number">1.7.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#兼容性-6"><span class="nav-number">1.7.2.</span> <span class="nav-text">兼容性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#footer"><span class="nav-number">1.8.</span> <span class="nav-text">footer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#描述-5"><span class="nav-number">1.8.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#兼容性-7"><span class="nav-number">1.8.2.</span> <span class="nav-text">兼容性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#adress"><span class="nav-number">1.9.</span> <span class="nav-text">adress</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#描述-6"><span class="nav-number">1.9.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#兼容性-8"><span class="nav-number">1.9.2.</span> <span class="nav-text">兼容性</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  <!--
+  &copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">青青子衿</span>
+  -->
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+    <!--
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      本站总点击
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+    -->
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytmKMEKk';
+      var conf = 'c05b7ae4543c881017b6f30806af34c8';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("MnRSmn6zIoJH2cKdus4STKnh-gzGzoHsz", "OmFstYUx6dn9Yyj64TTwSwAe");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
