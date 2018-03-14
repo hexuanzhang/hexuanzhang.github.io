@@ -90,7 +90,7 @@
 <meta property="og:description" content="背景与边框半透明边框问题   通常情况下，背景（色或图片）会延伸至元素边框外沿（但在边框下面），这种情况会导致边框和背景产生重叠，半透明边框呈现出来的是背景，无法实现半透明边框  解决方案   通过 background-clip 属性调整元素背景延伸范围  Demo 1234567background-clip: [border-box] |[padding-box] | [content-bo">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://oyzpu0yr9.bkt.clouddn.com/blog/180313/19dEilKiEm.png?imageslim">
-<meta property="og:updated_time" content="2018-03-13T14:13:02.774Z">
+<meta property="og:updated_time" content="2018-03-14T13:18:45.602Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《CSS 揭秘笔记 -- 背景与边框》">
 <meta name="twitter:description" content="背景与边框半透明边框问题   通常情况下，背景（色或图片）会延伸至元素边框外沿（但在边框下面），这种情况会导致边框和背景产生重叠，半透明边框呈现出来的是背景，无法实现半透明边框  解决方案   通过 background-clip 属性调整元素背景延伸范围  Demo 1234567background-clip: [border-box] |[padding-box] | [content-bo">
@@ -303,7 +303,7 @@
                 <span class="post-meta-item-text">更新于&#58;</span>
               
               <time title="更新于" itemprop="dateModified" datetime="2018-03-13T20:26:33+08:00">
-                2 小时前
+                1 天前
               </time>
             
           </span>
@@ -350,7 +350,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,025
+                  1,159
                 </span>
               
 
@@ -455,6 +455,16 @@
 <li><p>垂直条纹</p>
 <p><a href="https://codepen.io/zhanghx/pen/zWrxPE" target="_blank" rel="noopener">Demo</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.vertical-stripes &#123;</span><br><span class="line">  width: 300px;</span><br><span class="line">  height: 60px;</span><br><span class="line"></span><br><span class="line">  background-image: linear-gradient(to right, #fb3 50%, #58a 0);</span><br><span class="line">  background-repeat: repeat;</span><br><span class="line">  background-size: 75px 100%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>斜向条纹</p>
+<p><a href="https://codepen.io/zhanghx/pen/YaqKQo" target="_blank" rel="noopener">Demo</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;diagonal-stripes-demo&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;diagonal-stripes-demo1&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">  width: 300px;</span><br><span class="line">  height: 300px;</span><br><span class="line">  display: inline-block;</span><br><span class="line"></span><br><span class="line">  background-repeat: repeat;</span><br><span class="line">  background-size: 42.4px;</span><br><span class="line">&#125;</span><br><span class="line">.diagonal-stripes-demo &#123;</span><br><span class="line">  background-image: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.diagonal-stripes-demo1 &#123;</span><br><span class="line">  background-image: repeating-linear-gradient(45deg, #fb3, #fb3 15px, #58a 0, #58a 30px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同色系条纹</p>
+<p><a href="https://codepen.io/zhanghx/pen/YaqKjz" target="_blank" rel="noopener">Demo</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;subtle-stripes&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.subtle-stripes &#123;</span><br><span class="line">  width: 300px;</span><br><span class="line">  height: 300px;</span><br><span class="line"></span><br><span class="line">  background-color: #58a;</span><br><span class="line">  background-image: repeating-linear-gradient(45deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1) 15px, transparent 0, transparent 30px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 
