@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hexuanzhang.github.io/"/>
-  <updated>2018-03-16T14:20:20.186Z</updated>
+  <updated>2018-03-20T14:15:41.456Z</updated>
   <id>https://hexuanzhang.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>centos 登录没有奏效问题</title>
+    <link href="https://hexuanzhang.github.io/2018/03/20/centos-%E7%99%BB%E5%BD%95%E6%B2%A1%E6%9C%89%E5%A5%8F%E6%95%88%E9%97%AE%E9%A2%98/"/>
+    <id>https://hexuanzhang.github.io/2018/03/20/centos-登录没有奏效问题/</id>
+    <published>2018-03-20T14:13:46.000Z</published>
+    <updated>2018-03-20T14:15:41.456Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="centos-登录没有奏效问题"><a href="#centos-登录没有奏效问题" class="headerlink" title="centos 登录没有奏效问题"></a>centos 登录没有奏效问题</h2><p>今天在自己电脑上通过 VMware 虚拟机装了个 Cenos7，一切都安装设置好后，登录时缺提示登录无效。</p><p><img src="http://oyzpu0yr9.bkt.clouddn.com/blog/180320/jfhA31BmbJ.png?imageslim" alt="mark"></p><p>因为设置的是常用密码，应该不会记错。之后尝试通过终端登录，能登录成功，也就排除了密码错误的情况。</p><p>随后查<a href="https://bbs.csdn.net/topics/392270074" target="_blank" rel="noopener">资料</a>，发现是由于设置的密码里包含了大写字母的缘故。</p><p>具体有如下三种解决方法：</p><ul><li><p>修改密码，不使用大写字母</p></li><li><p>使用虚拟键盘输入密码</p><p><img src="http://oyzpu0yr9.bkt.clouddn.com/blog/180320/HCm5dFKK5L.png?imageslim" alt="mark"></p></li><li><p>输入大写字母时，按住 <code>Shift</code> + 对应的字母</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;centos-登录没有奏效问题&quot;&gt;&lt;a href=&quot;#centos-登录没有奏效问题&quot; class=&quot;headerlink&quot; title=&quot;centos 登录没有奏效问题&quot;&gt;&lt;/a&gt;centos 登录没有奏效问题&lt;/h2&gt;&lt;p&gt;今天在自己电脑上通过 VMware 
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="https://hexuanzhang.github.io/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="https://hexuanzhang.github.io/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>text-decoration 回顾</title>
@@ -504,32 +529,6 @@
     
     
       <category term="wxLite" scheme="https://hexuanzhang.github.io/tags/wxLite/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo 解析{{和}}报错</title>
-    <link href="https://hexuanzhang.github.io/2018/01/25/hexo-%E8%A7%A3%E6%9E%90-%E5%92%8C-%E6%8A%A5%E9%94%99/"/>
-    <id>https://hexuanzhang.github.io/2018/01/25/hexo-解析-和-报错/</id>
-    <published>2018-01-25T15:08:31.000Z</published>
-    <updated>2018-01-30T15:28:31.098Z</updated>
-    
-    <content type="html"><![CDATA[<p>晚上在更新文章时，使用 <code>hexo g</code> 生成报解析错误，具体错误如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Template render error: (unknown path) [Line 9, Column 14]</span><br><span class="line">unexpected token: &#125;&#125;</span><br></pre></td></tr></table></figure><p><img src="http://oyzpu0yr9.bkt.clouddn.com/blog/180125/LGJE7d936A.png?imageslim" alt="mark"></p><p>根据提示到 <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">https://hexo.io/docs/troubleshooting.html</a> 中找到了对应的解决方案：通过 <code>raw</code> 标签来包裹 <code> {{}}</code> 。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125; &#123;&#123; normal &#125;&#125; &#123;% endraw %&#125;</span><br></pre></td></tr></table></figure><p>之后网上查具体资料，发现其他人还有种解决方案：在 <code> }}</code> 中间添加空格。但这种方法可能会有歧义，还是按照官方的解决方案来。</p><p>虽然这只是个小问题，还是记录下。希望 <code>hexo</code> 后续版本能修复下，毕竟如果文章中 <code> }}</code> 之类出现比较频繁，这种解决方案也有点麻烦。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;晚上在更新文章时，使用 &lt;code&gt;hexo g&lt;/code&gt; 生成报解析错误，具体错误如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;
-      
-    
-    </summary>
-    
-      <category term="hexo" scheme="https://hexuanzhang.github.io/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="https://hexuanzhang.github.io/tags/hexo/"/>
     
   </entry>
   
