@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hexuanzhang.github.io/2018/03/27/Centos7-%E5%AE%89%E8%A3%85-nginx/</loc>
+    <loc>https://hexuanzhang.github.io/2018/03/27/CentOS7-%E5%BC%80%E5%90%AF-HTTP-%E7%AB%AF%E5%8F%A3/</loc>
     
-    <lastmod>2018-03-27T14:12:23.019Z</lastmod>
+    <lastmod>2018-03-27T14:47:35.263Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexuanzhang.github.io/2018/03/27/CentOS7-%E5%AE%89%E8%A3%85-nginx/</loc>
+    
+    <lastmod>2018-03-27T14:46:46.397Z</lastmod>
     
   </url>
   

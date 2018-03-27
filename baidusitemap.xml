@@ -4,19 +4,44 @@
 
     
   <url>
-    <loc>https://hexuanzhang.github.io/2018/03/27/Centos7-%E5%AE%89%E8%A3%85-nginx/</loc>
-    <lastmod>2018-03-27T14:12:23.019Z</lastmod>
+    <loc>https://hexuanzhang.github.io/2018/03/27/CentOS7-%E5%BC%80%E5%90%AF-HTTP-%E7%AB%AF%E5%8F%A3/</loc>
+    <lastmod>2018-03-27T14:47:35.263Z</lastmod>
     <data>
         <display>
-        <title>Centos7 安装 nginx</title>
+        <title>CentOS7 开启 HTTP 端口</title>
+        <pubTime>2018-03-27T14:46:25.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://hexuanzhang.github.io/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://hexuanzhang.github.io/2018/03/27/CentOS7-%E5%AE%89%E8%A3%85-nginx/</loc>
+    <lastmod>2018-03-27T14:46:46.397Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS7 安装 nginx</title>
         <pubTime>2018-03-27T14:08:15.000Z</pubTime>
         
         <tag>nginx</tag>
+         
+        <tag>linux</tag>
          
          
            
              
               <breadCrumb title="nginx" url="https://hexuanzhang.github.io/categories/nginx/"/>
+          
+             
+              <breadCrumb title="linux" url="https://hexuanzhang.github.io/categories/nginx/linux/"/>
           
         </display>
     </data>
