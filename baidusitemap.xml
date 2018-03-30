@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>https://hexuanzhang.github.io/2018/03/30/post-%E4%B8%89%E7%A7%8D%E6%8F%90%E4%BA%A4%E6%95%B0%E6%8D%AE%E6%96%B9%E5%BC%8F/</loc>
+    <lastmod>2018-03-30T12:47:22.485Z</lastmod>
+    <data>
+        <display>
+        <title>post 三种提交数据方式</title>
+        <pubTime>2018-03-30T12:45:57.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+        <tag>htttp</tag>
+         
+         
+           
+             
+              <breadCrumb title="htttp" url="https://hexuanzhang.github.io/categories/htttp/"/>
+          
+             
+              <breadCrumb title="javascript" url="https://hexuanzhang.github.io/categories/htttp/javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://hexuanzhang.github.io/2018/03/27/CentOS7-%E5%BC%80%E5%90%AF-HTTP-%E7%AB%AF%E5%8F%A3/</loc>
     <lastmod>2018-03-27T14:47:35.263Z</lastmod>
     <data>
@@ -31,9 +56,9 @@
         <title>CentOS7 安装 nginx</title>
         <pubTime>2018-03-27T14:08:15.000Z</pubTime>
         
-        <tag>nginx</tag>
-         
         <tag>linux</tag>
+         
+        <tag>nginx</tag>
          
          
            
