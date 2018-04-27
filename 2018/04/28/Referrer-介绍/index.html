@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="wxLite," />
+  <meta name="keywords" content="http," />
 
 
 
@@ -81,20 +81,18 @@
 
 
 
-<meta name="description" content="注册页面 通过 Page() 函数注册页面，函数接受 Object 参数，指定页面的初始数据、生命周期函数、事件处理函数等     属性 类型 描述     data Object 初始化数据   onLoad Function 生命周期函数–监听页面加载   onReady Function 生命周期函数–监听页面初次渲染完成   onShow Function 生命周期函数–监听页面显示">
-<meta name="keywords" content="wxLite">
+<meta name="description" content="在页面上引用图片、CSS、JS 等资源，或页面跳转时，都会产生 HTTP 请求，浏览器会在这些请求头上加上表示来源的字段：Referrer。 HTTP 规范是这么描述该字段的：  Referrer 请求头字段允许由客户端指定资源的 URI 来自于哪一个请求地址  Referer 字段有很多用途，如收集用户信息、日志分析、防止跨站请求伪造)、防盗链等。 Referer vs ReferrerHTTP">
+<meta name="keywords" content="http">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小程序页面注册">
-<meta property="og:url" content="https://hexuanzhang.github.io/2018/02/07/小程序页面注册/index.html">
+<meta property="og:title" content="Referrer 介绍">
+<meta property="og:url" content="https://hexuanzhang.github.io/2018/04/28/Referrer-介绍/index.html">
 <meta property="og:site_name" content="青青子衿">
-<meta property="og:description" content="注册页面 通过 Page() 函数注册页面，函数接受 Object 参数，指定页面的初始数据、生命周期函数、事件处理函数等     属性 类型 描述     data Object 初始化数据   onLoad Function 生命周期函数–监听页面加载   onReady Function 生命周期函数–监听页面初次渲染完成   onShow Function 生命周期函数–监听页面显示">
+<meta property="og:description" content="在页面上引用图片、CSS、JS 等资源，或页面跳转时，都会产生 HTTP 请求，浏览器会在这些请求头上加上表示来源的字段：Referrer。 HTTP 规范是这么描述该字段的：  Referrer 请求头字段允许由客户端指定资源的 URI 来自于哪一个请求地址  Referer 字段有很多用途，如收集用户信息、日志分析、防止跨站请求伪造)、防盗链等。 Referer vs ReferrerHTTP">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://mp.weixin.qq.com/debug/wxadoc/dev/image/mina-lifecycle.png?t=201822">
-<meta property="og:updated_time" content="2018-02-07T14:40:10.483Z">
+<meta property="og:updated_time" content="2018-04-27T16:13:44.360Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小程序页面注册">
-<meta name="twitter:description" content="注册页面 通过 Page() 函数注册页面，函数接受 Object 参数，指定页面的初始数据、生命周期函数、事件处理函数等     属性 类型 描述     data Object 初始化数据   onLoad Function 生命周期函数–监听页面加载   onReady Function 生命周期函数–监听页面初次渲染完成   onShow Function 生命周期函数–监听页面显示">
-<meta name="twitter:image" content="https://mp.weixin.qq.com/debug/wxadoc/dev/image/mina-lifecycle.png?t=201822">
+<meta name="twitter:title" content="Referrer 介绍">
+<meta name="twitter:description" content="在页面上引用图片、CSS、JS 等资源，或页面跳转时，都会产生 HTTP 请求，浏览器会在这些请求头上加上表示来源的字段：Referrer。 HTTP 规范是这么描述该字段的：  Referrer 请求头字段允许由客户端指定资源的 URI 来自于哪一个请求地址  Referer 字段有很多用途，如收集用户信息、日志分析、防止跨站请求伪造)、防盗链等。 Referer vs ReferrerHTTP">
 
 
 
@@ -124,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://hexuanzhang.github.io/2018/02/07/小程序页面注册/"/>
+  <link rel="canonical" href="https://hexuanzhang.github.io/2018/04/28/Referrer-介绍/"/>
 
 
 
 
 
-  <title>小程序页面注册 | 青青子衿</title>
+  <title>Referrer 介绍 | 青青子衿</title>
   
 
 
@@ -257,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hexuanzhang.github.io/2018/02/07/小程序页面注册/">
+    <link itemprop="mainEntityOfPage" href="https://hexuanzhang.github.io/2018/04/28/Referrer-介绍/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="青青子衿">
@@ -274,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">小程序页面注册</h1>
+          <h1 class="post-title" itemprop="name headline">Referrer 介绍</h1>
         
 
         <div class="post-meta">
@@ -286,8 +284,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T22:36:04+08:00">
-                3 个月前
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-28T00:12:58+08:00">
+                1 分钟前
               </time>
             
 
@@ -309,8 +307,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/wxLite/" itemprop="url" rel="index">
-                    <span itemprop="name">wxLite</span>
+                  <a href="/categories/htttp/" itemprop="url" rel="index">
+                    <span itemprop="name">htttp</span>
                   </a>
                 </span>
 
@@ -338,7 +336,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  861
+                  1,283
                 </span>
               
 
@@ -354,7 +352,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  6
                 </span>
               
             </div>
@@ -375,180 +373,241 @@
       
 
       
-        <h2 id="注册页面"><a href="#注册页面" class="headerlink" title="注册页面"></a>注册页面</h2><blockquote>
-<p>通过 <code>Page()</code> 函数注册页面，函数接受 <code>Object</code> 参数，指定页面的初始数据、生命周期函数、事件处理函数等</p>
+        <p>在页面上引用图片、CSS、JS 等资源，或页面跳转时，都会产生 HTTP 请求，浏览器会在这些请求头上加上表示来源的字段：<code>Referrer</code>。</p>
+<p><a href="https://tools.ietf.org/html/rfc2616#section-14.36" target="_blank" rel="noopener">HTTP 规范</a>是这么描述该字段的：</p>
+<blockquote>
+<p><code>Referrer</code> 请求头字段允许由客户端指定资源的 URI 来自于哪一个请求地址</p>
 </blockquote>
+<p><code>Referer</code> 字段有很多用途，如收集用户信息、日志分析、防止<a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF" target="_blank" rel="noopener">跨站请求伪造</a>)、防盗链等。</p>
+<h3 id="Referer-vs-Referrer"><a href="#Referer-vs-Referrer" class="headerlink" title="Referer vs Referrer"></a>Referer vs Referrer</h3><p>HTTP 协议中有一个用来表示页面或资源来源的请求头，由 Philip Hallam-Baker 于上世纪 90 年代提出来，他当时把这个请求头叫做 <code>Referer</code>，并最终写进了 <a href="https://tools.ietf.org/html/rfc1945#section-10.13" target="_blank" rel="noopener">RFC1945</a>，也就是 HTTP/1.0 协议:</p>
+<blockquote>
+<p>The Referer request-header field allows the client to specify, for the server’s benefit, the address (URI) of the resource from which the Request-URI was obtained.</p>
+</blockquote>
+<p>但是这个单词被他拼错了，正确的拼写应该是 <code>Referrer</code>。但是这个错误被发现之前，已经被大量使用，如果要改过来需要所有服务端、客户端的一致配合，还有大量的代码需要排查修改。于是，HTTP 的标准制定者们决定将错就错。</p>
+<p>下面这段描述来自于 <a href="https://tools.ietf.org/html/rfc2616#section-14.36" target="_blank" rel="noopener">FC2616</a>，也就是著名的 HTTP/1.1 协议：</p>
+<blockquote>
+<p>The Referer[sic] request-header field allows the client to specify, for the server’s benefit, the address (URI) of the resource from which the Request-URI was obtained (the “referrer”, although the header field is misspelled.)</p>
+</blockquote>
+<p>相比 HTTP/1.0，HTTP/1.1 除了加上了对这个错误的说明之外，没有其他变化。 <code>[sic]</code> 在拉丁文中表示原文如此，很多其他标准在表述 HTTP 中的 <code>Referer</code> 请求头时，都会加上 <code>[sic]</code>，避免引起读者误解。</p>
+<p>由于 HTTP 协议将错就错，浏览器当然只好按错的来，服务端收到的也是拼错的，因而大部分 Web Server、服务端语言或框架，都跟着拼错。大部分 Web Server、服务端语言或框架，都跟着拼错。</p>
+<p>但是在浏览器中，浏览器厂商采用了正确的拼写 <code>Referrer</code>：<a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140" target="_blank" rel="noopener">document.referrer</a>、<a href="https://fetch.spec.whatwg.org/#dom-request-referrer" target="_blank" rel="noopener">request.referrer</a> 以及 <a href="https://imququ.com/post/referrer-policy.html" target="_blank" rel="noopener">Referrer Policy</a>。</p>
+<h3 id="Referrer-Policy"><a href="#Referrer-Policy" class="headerlink" title="Referrer Policy"></a>Referrer Policy</h3><p>2014 年，W3C Web 应用安全工作组（Web Application Security Working Group）发布了 <a href="http://w3c.github.io/webappsec/specs/referrer-policy/" target="_blank" rel="noopener">Referrer Policy</a> 草案，对浏览器该如何发送 Referrer 做了详细的规定。</p>
+<p>根据草案描述，我们可以针对性的隐藏 <code>Referrer</code>、或者只发送来源 URL 的 host 部分，但不允许篡改 <code>Referrer</code>。</p>
+<p>草案规定了以下几种策略：</p>
+<ul>
+<li><p>no-referrer</p>
+<blockquote>
+<p>任何情况下都不发送 <code>Referrer</code> 信息</p>
+</blockquote>
+</li>
+<li><p>no-referrer-when-downgrade</p>
+<blockquote>
+<p>默认策略，只有在发生协议降级的情况下不发送 <code>Referrer</code> 信息，如 HTTPS 页面中引入 HTTP 资源、HTTPS 跳转至 HTTP 等</p>
+</blockquote>
+</li>
+<li><p>‘’</p>
+<blockquote>
+<p>空字符串，等同于 <code>no-referrer-when-downgrade</code></p>
+</blockquote>
+</li>
+<li><p>origin</p>
+<blockquote>
+<p>任何情况下都发送 <code>Referrer</code> 信息，但<code>Referrer</code> 只包含请求协议和 host，不包含具体的路径和参数信息</p>
+</blockquote>
+</li>
+<li><p>origin-when-cross-origin</p>
+<blockquote>
+<p>只有在跨域访问时发送只包含协议和 host 的 <code>Referrer</code> 信息，同域的情况下发送完成的 <code>Referrer</code></p>
+</blockquote>
+</li>
+<li><p>same-origin</p>
+<blockquote>
+<p>同域情况下才发送 <code>Referrer</code> 信息，跨域不发送</p>
+</blockquote>
+</li>
+<li><p>strict-origin</p>
+<blockquote>
+<p>在协议降级的情况下不发送 <code>Referrer</code> 信息，其他情况下发送包含协议和 host 的信息</p>
+</blockquote>
+</li>
+<li><p>strict-origin-when-cross-origin</p>
+<blockquote>
+<p>在同源情况下发送完整的 <code>Referrer</code> 信息；跨域且同等安全级别下发送只包含协议和 host 部分；协议降级的情况下不发送</p>
+</blockquote>
+</li>
+<li><p>unsafe-url</p>
+<blockquote>
+<p>任何情况下都发送完整的 <code>Referrer</code> 信息</p>
+</blockquote>
+</li>
+</ul>
 <table>
 <thead>
 <tr>
-<th>属性</th>
-<th>类型</th>
-<th>描述</th>
+<th>Policy</th>
+<th style="text-align:left">Document</th>
+<th>Navigation to</th>
+<th>Referrer</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>data</td>
-<td>Object</td>
-<td>初始化数据</td>
+<td>no-referrer</td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td>any domain or path</td>
+<td>no referrer</td>
 </tr>
 <tr>
-<td>onLoad</td>
-<td>Function</td>
-<td>生命周期函数–监听页面加载</td>
+<td>no-referrer-when-downgrade</td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td><a href="https://example.com/not-page.html" target="_blank" rel="noopener">https://example.com/not-page.html</a></td>
+<td><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
 </tr>
 <tr>
-<td>onReady</td>
-<td>Function</td>
-<td>生命周期函数–监听页面初次渲染完成</td>
-</tr>
-<tr>
-<td>onShow</td>
-<td>Function</td>
-<td>生命周期函数–监听页面显示</td>
-</tr>
-<tr>
-<td>onHide</td>
-<td>Function</td>
-<td>生命周期函数–监听页面隐藏</td>
-</tr>
-<tr>
-<td>onUnload</td>
-<td>Function</td>
-<td>生命周期函数–监听页面卸载</td>
-</tr>
-<tr>
-<td>onPullDownRefresh</td>
-<td>Function</td>
-<td>页面相关事件处理函数–监听用户下拉动作</td>
-</tr>
-<tr>
-<td>onReachBottom</td>
-<td>Function</td>
-<td>页面上拉触底事件的处理函数</td>
-</tr>
-<tr>
-<td>onShareAppMessage</td>
-<td>Function</td>
-<td>右上角转发函数</td>
-</tr>
-<tr>
-<td>onPageScroll</td>
-<td>Function</td>
-<td>页面滚动函数</td>
-</tr>
-<tr>
-<td>onTabItemTap</td>
-<td>Function</td>
-<td>当前是 tab 页时，点击 tab 时触发</td>
-</tr>
-<tr>
-<td>其他</td>
-<td>Any</td>
-<td>可以添加任意的函数或数据到 object 参数中，在页面的函数中用 <code>this</code> 可以访问</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">    data: &#123;</span><br><span class="line">        text: &quot;This is page data.&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    onLoad: (options) =&gt; &#123; &#125;,</span><br><span class="line">    onReady: () =&gt; &#123; &#125;,</span><br><span class="line">    onShow: () =&gt; &#123; &#125;,</span><br><span class="line">    onHide: () =&gt; &#123; &#125;,</span><br><span class="line">    onUnload: () =&gt; &#123; &#125;,</span><br><span class="line">    onPullDownRefresh: () =&gt; &#123; &#125;,</span><br><span class="line">    onReachBottom: () =&gt; &#123; &#125;,</span><br><span class="line">    onShareAppMessage: () =&gt; &#123; &#125;,</span><br><span class="line">    onPageScroll: () =&gt; &#123; &#125;,</span><br><span class="line">    onTabItemTap: (item) =&gt; &#123;</span><br><span class="line">        console.log(item.index)</span><br><span class="line">        console.log(item.pagePath)</span><br><span class="line">        console.log(item.text)</span><br><span class="line">    &#125;,</span><br><span class="line">    viewTap: function () &#123;</span><br><span class="line">        this.setData(&#123;</span><br><span class="line">            text: &apos;Set some data for updating view.&apos;</span><br><span class="line">        &#125;, function () &#123;</span><br><span class="line">            // this is setData callback</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    otherData: &#123;&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="生命周期函数"><a href="#生命周期函数" class="headerlink" title="生命周期函数"></a>生命周期函数</h3><ul>
-<li><p><code>onLoad</code></p>
-<blockquote>
-<p>只调用一次，可以在该函数中获取其他页面打开当前页面所调用的 <code>query</code> 参数</p>
-</blockquote>
-</li>
-<li><p><code>onShow</code></p>
-<blockquote>
-<p>每次打开页面都会调用</p>
-</blockquote>
-</li>
-<li><p><code>onReady</code></p>
-<blockquote>
-<p>页面初次渲染时调用，此时可以与视图进行交互</p>
-<p>对界面进行设置如 <code>wx.setNavigationBarTitle</code> 需在该函数之后</p>
-</blockquote>
-</li>
-<li><p><code>onHide</code></p>
-<blockquote>
-<p>使用 <code>navigateTo</code> 或切换底部 <code>tab</code> 时调用</p>
-</blockquote>
-</li>
-<li><p><code>onUnload</code></p>
-<blockquote>
-<p>使用 <code>redirectTo</code> 或 <code>navigateBack</code> 时调用</p>
-</blockquote>
-</li>
-</ul>
-<p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/mina-lifecycle.png?t=201822" alt="img"></p>
-<h3 id="页面相关事件处理函数"><a href="#页面相关事件处理函数" class="headerlink" title="页面相关事件处理函数"></a>页面相关事件处理函数</h3><ul>
-<li><p><code>onPullDownRefresh</code></p>
-<blockquote>
-<p>监听下拉刷新事件</p>
-<p>需要在全局配置或页面配置中开启 <code>enablePullDownRefresh</code></p>
-<p>当处理完数据刷新后，可以通过 <a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/pulldown.html#wxstoppulldownrefresh" target="_blank" rel="noopener"><code>wx.stopPullDownRefresh</code></a> 停止当前页面的下拉刷新，也可通过 <code>wx.startPullDownRefresh</code> 调触发下拉刷新动画</p>
-</blockquote>
-</li>
-<li><p><code>onReachBottom</code></p>
-<blockquote>
-<p>监听上拉触底事件</p>
-<p>需要在全局配置或页面配置中设置触发距离 <code>onReachBottomDistance</code></p>
-<p>在触发距离内滑动期间只会被触发一次</p>
-</blockquote>
-</li>
-<li><p><code>onPageScroll</code></p>
-<blockquote>
-<p>监听页面滚动事件</p>
-<p>参数为 Object，包含 <code>scrollTop</code> 字段（页面在垂直方向已滚动的距离，单位px）</p>
-</blockquote>
-</li>
-<li><p><code>onShareAppMessage</code></p>
-<blockquote>
-<p>只有定义了此事件处理函数，右上角菜单才会显示“转发”按钮，点击转发按钮时触发</p>
-<p>该事件需要返回一个 <code>Object</code>，用于自定义转发内容，包含转发标题和转发路径</p>
-<blockquote>
-<p>title：转发标题，默认为小程序名称</p>
-<p>path：转发路径，必须以 / 开头，默认为当前页面路径</p>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">    onShareAppMessage: () =&gt; (&#123;</span><br><span class="line">        title: &apos;自定义转发标题&apos;,</span><br><span class="line">        path: &apos;/pages/logs/logs&apos;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="Page-prototype-route"><a href="#Page-prototype-route" class="headerlink" title="Page.prototype.route"></a>Page.prototype.route</h3><blockquote>
-<p><code>route</code> 字段可以获取到当前页面的路径</p>
-<p>在 <code>onReay</code>、<code>onLoad</code>等函数中调用该字段会报错</p>
-</blockquote>
-<h3 id="Page-prototype-setData"><a href="#Page-prototype-setData" class="headerlink" title="Page.prototype.setData()"></a>Page.prototype.setData()</h3><blockquote>
-<p><code>setData</code> 函数用于将数据从逻辑层发送到视图层（异步），同时改变对应的 <code>this.data</code> 的值（同步）</p>
-<p><strong>直接修改 this.data 而不调用 this.setData 是无法改变页面状态，还会造成数据不一致</strong></p>
-<p><strong>单次修改的数据不能超过 1024kB，请尽量避免一次设置过多的数据</strong></p>
-<p>不要把 data 中任何一项的 value 设为 <code>undefined</code> ，否则这一项将不被设置并可能遗留一些潜在问题</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>字段</th>
-<th>类型</th>
-<th>必填</th>
-<th>描述</th>
-<th>最低版本</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>data</td>
-<td>Object</td>
-<td>是</td>
-<td>需要改变的数据（key: value）</td>
 <td></td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td><a href="https://not.example.com/not-page.html" target="_blank" rel="noopener">https://not.example.com/not-page.html</a></td>
+<td><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
 </tr>
 <tr>
-<td>callback</td>
-<td>Function</td>
-<td>否</td>
-<td>回调函数</td>
-<td><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/compatibility.html" target="_blank" rel="noopener">1.5.0</a></td>
+<td></td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td><a href="http://example.com/not-page.html" target="_blank" rel="noopener">http://example.com/not-page.html</a></td>
+<td>no referrer</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><a href="http://example.com/page.html" target="_blank" rel="noopener">http://example.com/page.html</a></td>
+<td><a href="https://not.example.com/" target="_blank" rel="noopener">https://not.example.com/</a></td>
+<td><a href="http://example.com/page.html" target="_blank" rel="noopener">http://example.com/page.html</a></td>
+</tr>
+<tr>
+<td>origin</td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td>any domain or path</td>
+<td><a href="https://example.com" target="_blank" rel="noopener">https://example.com</a></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><a href="http://example.com/page.html" target="_blank" rel="noopener">http://example.com/page.html</a></td>
+<td>any domain or path</td>
+<td><a href="http://example.com" target="_blank" rel="noopener">http://example.com</a></td>
+</tr>
+<tr>
+<td>origin-when-cross-origin</td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td><a href="https://example.com/not-page.html" target="_blank" rel="noopener">https://example.com/not-page.html</a></td>
+<td><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td><a href="https://not.example.com/page.html" target="_blank" rel="noopener">https://not.example.com/page.html</a></td>
+<td><a href="https://example.com" target="_blank" rel="noopener">https://example.com</a></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td><a href="http://example.com/page.html" target="_blank" rel="noopener">http://example.com/page.html</a></td>
+<td><a href="https://example.com" target="_blank" rel="noopener">https://example.com</a></td>
+</tr>
+<tr>
+<td>same-origin</td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td><a href="https://example.com/not-page.html" target="_blank" rel="noopener">https://example.com/not-page.html</a></td>
+<td><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td><a href="https://not.example.com/page.html" target="_blank" rel="noopener">https://not.example.com/page.html</a></td>
+<td>no referrer</td>
+</tr>
+<tr>
+<td>strict-origin</td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td><a href="https://not.example.com/page.html" target="_blank" rel="noopener">https://not.example.com/page.html</a></td>
+<td><a href="https://example.com" target="_blank" rel="noopener">https://example.com</a></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td><a href="http://example.com/page.html" target="_blank" rel="noopener">http://example.com/page.html</a></td>
+<td>no referrer</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><a href="http://example.com/page.html" target="_blank" rel="noopener">http://example.com/page.html</a></td>
+<td>any domain or path</td>
+<td><a href="http://example.com" target="_blank" rel="noopener">http://example.com</a></td>
+</tr>
+<tr>
+<td>strict-origin-when-cross-origin</td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td><a href="https://example.com/not-page.html" target="_blank" rel="noopener">https://example.com/not-page.html</a></td>
+<td><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td><a href="https://not.example.com/page.html" target="_blank" rel="noopener">https://not.example.com/page.html</a></td>
+<td><a href="https://example.com" target="_blank" rel="noopener">https://example.com</a></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td><a href="http://example.com/page.html" target="_blank" rel="noopener">http://example.com/page.html</a></td>
+<td>no referrer</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left"><a href="http://example.com/page.html" target="_blank" rel="noopener">http://example.com/page.html</a></td>
+<td>any domain or path</td>
+<td><a href="http://example.com" target="_blank" rel="noopener">http://example.com</a></td>
+</tr>
+<tr>
+<td>unsafe-url</td>
+<td style="text-align:left"><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
+<td>any domain or path</td>
+<td><a href="https://example.com/page.html" target="_blank" rel="noopener">https://example.com/page.html</a></td>
 </tr>
 </tbody>
 </table>
+<h3 id="Referrer-Policy-Delivery"><a href="#Referrer-Policy-Delivery" class="headerlink" title="Referrer Policy Delivery"></a>Referrer Policy Delivery</h3><p>设置 Referrer Policy 有以下 3 种方式：</p>
+<ul>
+<li><p>CSP</p>
+<p><a href="https://www.w3.org/TR/2014/WD-CSP11-20140211/#referrer" target="_blank" rel="noopener">CSP 规范的 1.1 版本</a> 中支持设置 <code>referrer</code> 信息，但在 <a href="https://www.w3.org/TR/CSP2" target="_blank" rel="noopener">2.0 版本</a> <code>referrer</code> 只是只读字段，不与许设置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Security-Policy: referrer no-referrer|no-referrer-when-downgrade|origin|origin-when-cross-origin|unsafe-url;</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>meta</p>
+<p><code>&lt;meta&gt;</code> 只能放在 <code>&lt;head&gt;</code> 中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer|no-referrer-when-downgrade|origin|origin-when-crossorigin|unsafe-url&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>a 标签 referrer 属性</p>
+<p>策略优先级比 CSP、 <code>&lt;meta&gt;</code> 要高。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;http://example.com&quot; referrer=&quot;no-referrer|origin|unsafe-url&quot;&gt;xxx&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a><a href="https://caniuse.com/#search=referrer" target="_blank" rel="noopener">兼容性</a></h3><ul>
+<li>IE11 之前的版本不支持</li>
+<li>IE11 、Edge、Safari(8~11) 仅支持<a href="https://wiki.whatwg.org/wiki/Meta_referrer" target="_blank" rel="noopener">旧版草案（已废弃）</a></li>
+<li>其它主流浏览器均支持</li>
+</ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><p><a href="https://imququ.com/post/referrer-or-referer.html" target="_blank" rel="noopener">Referrer 还是 Referer</a></p>
+</li>
+<li><p><a href="https://imququ.com/post/referrer-policy.html" target="_blank" rel="noopener">Referrer Policy 介绍</a></p>
+</li>
+<li><p><a href="https://blog.fastmail.com/2016/06/20/everything-you-could-ever-want-to-know-and-more-about-controlling-the-referer-header/" target="_blank" rel="noopener">controlling the Referer header</a></p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy" target="_blank" rel="noopener">Referrer Policy(MSDN)</a></p>
+</li>
+<li><p><a href="https://w3c.github.io/webappsec-referrer-policy/" target="_blank" rel="noopener">Referrer Policy Draft</a></p>
+<p>​</p>
+</li>
+</ul>
 
       
     </div>
@@ -569,7 +628,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://hexuanzhang.github.io/2018/02/07/小程序页面注册/" title="小程序页面注册">https://hexuanzhang.github.io/2018/02/07/小程序页面注册/</a>
+    <a href="https://hexuanzhang.github.io/2018/04/28/Referrer-介绍/" title="Referrer 介绍">https://hexuanzhang.github.io/2018/04/28/Referrer-介绍/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -584,7 +643,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/wxLite/" rel="tag"># wxLite</a>
+            <a href="/tags/http/" rel="tag"># http</a>
           
         </div>
       
@@ -597,8 +656,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/06/小程序运行机制和注册/" rel="next" title="小程序运行机制和注册">
-                <i class="fa fa-chevron-left"></i> 小程序运行机制和注册
+              <a href="/2018/04/16/CSS-自定义属性（变量）/" rel="next" title="CSS 自定义属性（变量）">
+                <i class="fa fa-chevron-left"></i> CSS 自定义属性（变量）
               </a>
             
           </div>
@@ -606,10 +665,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/09/小程序页面路由/" rel="prev" title="小程序页面路由">
-                小程序页面路由 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -755,7 +810,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#注册页面"><span class="nav-number">1.</span> <span class="nav-text">注册页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生命周期函数"><span class="nav-number">1.1.</span> <span class="nav-text">生命周期函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面相关事件处理函数"><span class="nav-number">1.2.</span> <span class="nav-text">页面相关事件处理函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Page-prototype-route"><span class="nav-number">1.3.</span> <span class="nav-text">Page.prototype.route</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Page-prototype-setData"><span class="nav-number">1.4.</span> <span class="nav-text">Page.prototype.setData()</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Referer-vs-Referrer"><span class="nav-number">1.</span> <span class="nav-text">Referer vs Referrer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Referrer-Policy"><span class="nav-number">2.</span> <span class="nav-text">Referrer Policy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Referrer-Policy-Delivery"><span class="nav-number">3.</span> <span class="nav-text">Referrer Policy Delivery</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容性"><span class="nav-number">4.</span> <span class="nav-text">兼容性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
